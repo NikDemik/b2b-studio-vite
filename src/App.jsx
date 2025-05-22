@@ -1,7 +1,6 @@
-import React from 'react';
-
 const App = () => {
-    return <div>App</div>;
+    return;
+    <main className="overflow-hidden "></main>;
 };
 
 export default App;
