@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: 'Cygre';
+    src: local('Cygre'), url(./fonts/Cygre/Font_cygre.ttf) format('ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +15,7 @@
     }
 
     body {
-        @apply font-poppins text-[16px] tracking-[-0.03em] text-p5;
+        @apply font-poppins text-[16px] text-p4;
     }
 
     a {
@@ -37,7 +42,7 @@
     }
 
     .h1 {
-        @apply text-[84px] font-black leading-[84px] tracking-[-0.03em];
+        @apply text-[102px] font-bold leading-[128px];
     }
 
     .h2 {
@@ -61,7 +66,7 @@
     }
 
     .body-1 {
-        @apply text-[22px] leading-[36px];
+        @apply text-[89px] font-light leading-[89px];
     }
 
     .body-2 {
@@ -77,7 +82,7 @@
     }
 
     .base-bold {
-        @apply text-[16px] font-bold leading-[24px];
+        @apply text-[25px] tracking-[0.03em];
     }
 
     .base-small {
@@ -98,6 +103,18 @@
 
     /* END of Typography */
     /* START of Gradients */
+    .bg1 {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .bg2 {
+        background: rgba(0, 0, 0, 0.29);
+    }
+
+    .bg-btn {
+        background: rgba(0, 149, 255, 0.12);
+    }
+
     .g1 {
         background: linear-gradient(rgba(196, 203, 245, 0.5), transparent);
     }
@@ -137,7 +154,7 @@
     /* END of Gradients */
     /* START of Common */
     .container {
-        @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+        @apply mx-auto max-w-[1920px]  px-28 max-xl:px-10 max-lg:px-6 max-sm:px-4;
     }
 
     .caption {
@@ -156,11 +173,11 @@
     /* END of Common */
     /* START of Header */
     .nav-active {
-        @apply text-p3;
+        @apply text-p1;
     }
 
     .nav-li {
-        @apply relative flex flex-1 items-center justify-between max-lg:flex-col max-lg:items-start;
+        @apply relative flex flex-1 whitespace-nowrap items-center justify-between max-lg:flex-col max-lg:items-start;
     }
 
     .nav-logo {

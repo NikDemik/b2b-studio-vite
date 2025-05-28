@@ -26,7 +26,7 @@ const Header = () => {
             spy
             smooth
             activeClass="nav-active"
-            className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+            className="base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 max-2xl:my-4 max-2xl:h5"
         >
             {title}
         </LinkScroll>
@@ -35,53 +35,55 @@ const Header = () => {
     return (
         <header
             className={clsx(
-                'fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4',
-                hasScrolled && 'py-2 bg-black-100 backdrop-blur-[8px]',
+                'fixed top-0 left-0 z-50 w-full bg1 backdrop-blur-[22px] shadow-100 py-14 transition-all duration-500 max-2xl:py-4',
+                hasScrolled && 'py-6 ',
             )}
         >
-            <div className="container flex h-14 items-center max-lg:px-5">
-                <a className="lg:hidden flex-1 cursor-pointer z-2">
-                    <img src="/images/xora.svg" width={115} height={55} alt="logo" />
+            <div className="container flex h-14 items-center max-2xl:px-5">
+                <a className="2xl:hidden flex-1 cursor-pointer z-2">
+                    <img src="/images/logo.svg" width={115} height={55} alt="logo" />
                 </a>
 
                 <div
                     className={clsx(
-                        'w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0',
-                        isOpen ? 'max-lg:opacity-100' : 'max-lg:pointer-events-none',
+                        'w-full max-2xl:fixed max-2xl:top-0 max-2xl:left-0 max-2xl:w-full max-2xl:bg-s2 max-2xl:opacity-0',
+                        isOpen ? 'max-2xl:opacity-100' : 'max-2xl:pointer-events-none',
                     )}
                 >
-                    <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
-                        <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
-                            <ul className="flex max-lg:block max-lg:px-12">
+                    <div className="max-2xl:relative max-2xl:flex max-2xl:flex-col max-2xl:min-h-screen max-2xl:p-6 max-2xl:overflow-hidden sidebar-before max-md:px-4">
+                        <nav className=" flex justify-between max-2xl:relative max-2xl:z-2 max-2xl:my-auto">
+                            <LinkScroll
+                                to="hero"
+                                offset={-250}
+                                spy
+                                smooth
+                                className={clsx(
+                                    'max-2xl:hidden transition-transform duration-500 cursor-pointer',
+                                )}
+                            >
+                                <img src="/images/logo.svg" width={192} height={89} alt="logo" />
+                            </LinkScroll>
+                            <ul className="flex gap-20 max-2xl:block max-2xl:px-12">
                                 <li className="nav-li">
-                                    <NavLink title="features" />
-                                    <div className="dot" />
-                                    <NavLink title="pricing" />
+                                    <NavLink title="главная" />
                                 </li>
-
-                                <li className="nav-logo">
-                                    <LinkScroll
-                                        to="hero"
-                                        offset={-250}
-                                        spy
-                                        smooth
-                                        className={clsx(
-                                            'max-lg:hidden transition-transform duration-500 cursor-pointer',
-                                        )}
-                                    >
-                                        <img
-                                            src="/images/xora.svg"
-                                            width={160}
-                                            height={55}
-                                            alt="logo"
-                                        />
-                                    </LinkScroll>
-                                </li>
-
                                 <li className="nav-li">
-                                    <NavLink title="faq" />
-                                    <div className="dot" />
-                                    <NavLink title="download" />
+                                    <NavLink title="о нас" />
+                                </li>
+                                <li className="nav-li">
+                                    <NavLink title="портфолио" />
+                                </li>
+                                <li className="nav-li">
+                                    <NavLink title="услуги" />
+                                </li>
+                                <li className="nav-li">
+                                    <NavLink title="стоимость" />
+                                </li>
+                                <li className="nav-li">
+                                    <NavLink title="FAQ" />
+                                </li>
+                                <li className="nav-li">
+                                    <NavLink title="контакты" />
                                 </li>
                             </ul>
                         </nav>
@@ -106,7 +108,7 @@ const Header = () => {
                 </div>
 
                 <button
-                    className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
+                    className="2xl:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
                     onClick={() => setIsOpen((prevState) => !prevState)}
                 >
                     <img

@@ -4,13 +4,13 @@ export default {
     theme: {
         extend: {
             colors: {
-                p1: '#2EF2FF',
-                p2: '#3C52D9',
-                p3: '#C8EA80',
-                p4: '#EAEDFF',
+                p1: '#000c63',
+                p2: '#3e8dff',
+                p3: '#fff',
+                p4: '#000',
                 p5: '#C4CBF5',
-                s1: '#080D27',
-                s2: '#0C1838',
+                s1: '#fff',
+                s2: '#fff',
                 s3: '#334679',
                 s4: '#1959AD',
                 s5: '#263466',
@@ -20,14 +20,14 @@ export default {
                 },
             },
             boxShadow: {
-                100: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 3px 6px #1959AD',
-                200: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 4px 10px #3391FF',
+                100: '0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(255, 255, 255, 0.05), inset 0 4px 4px 0 rgba(255, 255, 255, 0.15), inset 0 0 68px 0 rgba(255, 255, 255, 0.05)',
+                200: 'inset 0 6px 6px 0 rgba(0, 0, 0, 0.15), inset 0 6px 103px 0 rgba(0, 118, 253, 0.05)',
                 300: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 3px 6px #1959AD',
                 400: 'inset 0px 2px 4px 0 rgba(255, 255, 255, 0.05)',
                 500: '0px 16px 24px rgba(0, 0, 0, 0.25), 0px -14px 48px rgba(40, 51, 111, 0.7)',
             },
             fontFamily: {
-                inter: ['Inter', 'sans-serif'],
+                cygre: ['Cygre', 'sans-serif'],
                 poppins: ['Poppins', 'sans-serif'],
             },
             transitionProperty: {
