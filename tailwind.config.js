@@ -29,6 +29,7 @@ export default {
             fontFamily: {
                 cygre: ['Cygre', 'sans-serif'],
                 poppins: ['Poppins', 'sans-serif'],
+                montserrat: ['Montserrat', 'sans-serif'],
             },
             transitionProperty: {
                 borderColor: 'border-color',

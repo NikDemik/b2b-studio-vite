@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
     font-family: 'Cygre';
@@ -15,7 +16,7 @@
     }
 
     body {
-        @apply font-poppins text-[16px] text-p4;
+        @apply font-montserrat text-[16px] text-p4;
     }
 
     a {
@@ -42,7 +43,7 @@
     }
 
     .h1 {
-        @apply text-[102px] font-bold leading-[128px];
+        @apply text-[102px] font-extrabold leading-[136px];
     }
 
     .h2 {
@@ -66,7 +67,7 @@
     }
 
     .body-1 {
-        @apply text-[89px] font-light leading-[89px];
+        @apply text-[33px] font-light;
     }
 
     .body-2 {
@@ -113,6 +114,10 @@
 
     .bg-btn {
         background: rgba(0, 149, 255, 0.12);
+    }
+
+    .bg-btn-hov {
+        background: rgba(0, 108, 185, 0.31);
     }
 
     .g1 {

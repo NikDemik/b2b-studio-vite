@@ -1,14 +1,9 @@
 import clsx from 'clsx';
-import Marker from './Marker';
 
 const Button = ({ children, href, containerClassName, onClick }) => {
     const Inner = () => (
         <>
-            <span className="relative flex items-center min-h-[60px] px-16 py-8 bg-btn backdrop-blur-[22px] rounded-full shadow-200 inner-before group-hover:before:opacity-100 overflow-hidden">
-                <span className=" relative z-2 font-poppins  text-p4 text-[30px] font-light">
-                    {children}
-                </span>
-            </span>
+            <span className=" relative z-2 text-p4 text-[36px]">{children}</span>
         </>
     );
 
@@ -17,7 +12,13 @@ const Button = ({ children, href, containerClassName, onClick }) => {
             <Inner />
         </a>
     ) : (
-        <button className={clsx(containerClassName)} onClick={onClick}>
+        <button
+            className={clsx(
+                'relative flex items-center min-h-[60px] px-[76px] py-[36px] bg-btn backdrop-blur-[22px] rounded-full shadow-200 inner-before group-hover:before:opacity-100 overflow-hidden hover:bg-btn-hov transition-all duration-500',
+                containerClassName,
+            )}
+            onClick={onClick}
+        >
             <Inner />
         </button>
     );
