@@ -71,7 +71,7 @@
     }
 
     .body-2 {
-        @apply text-[18px] font-semibold leading-[32px];
+        @apply text-[18px] font-light leading-[32px];
     }
 
     .body-3 {
@@ -105,11 +105,11 @@
     /* END of Typography */
     /* START of Gradients */
     .bg1 {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.3);
     }
 
     .bg2 {
-        background: rgba(0, 0, 0, 0.29);
+        background: red;
     }
 
     .bg-btn {
@@ -160,6 +160,18 @@
     /* START of Common */
     .container {
         @apply mx-auto max-w-[1920px]  px-28 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+    }
+
+    .container-full {
+        @apply mx-auto max-w-[1920px] px-[10%] max-xl:px-[6%] max-lg:px-[5%] max-sm:px-[4%];
+    }
+
+    .container-full-l {
+        @apply mx-auto max-w-[1920px] pr-[10%] max-xl:pr-[6%] max-lg:pr-[5%] max-sm:pr-[4%];
+    }
+
+    .container-full-r {
+        @apply mx-auto max-w-[1920px] pl-[10%] max-xl:pl-[6%] max-lg:pl-[5%] max-sm:pl-[4%];
     }
 
     .caption {
