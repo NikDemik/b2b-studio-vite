@@ -109,7 +109,11 @@
     }
 
     .bg2 {
-        background: red;
+        background: rgba(0, 177, 255, 0.12);
+    }
+
+    .bg3 {
+        background: blue;
     }
 
     .bg-btn {
@@ -160,6 +164,10 @@
     /* START of Common */
     .container {
         @apply mx-auto max-w-[1920px]  px-28 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+    }
+
+    .container-r {
+        @apply mx-auto max-w-[1920px]  pl-28 max-xl:pl-10 max-lg:pl-6 max-sm:pl-4;
     }
 
     .container-full {
@@ -228,14 +236,24 @@
     .glow-after {
         @apply after:g8 after:absolute after:bottom-0 after:left-4 after:z-4 after:h-0.5 after:w-7/20 after:opacity-0 after:transition-all after:duration-500 after:content-[''] group-hover:after:left-3/5 group-hover:after:opacity-40;
     }
-
     /*END of Custom Button*/
+
     /* START of Feature */
     .feature-after {
         @apply after:g1 after:absolute after:right-0 after:top-0 after:h-full after:w-1/2 after:mix-blend-soft-light after:content-[''] max-md:after:hidden;
     }
-
     /* END of Feature */
+
+    /* Start of Section */
+    .section-title {
+        @apply text-p1 text-[62px] font-extrabold;
+    }
+
+    .section-title-bg {
+        @apply bg2;
+    }
+    /* END of Section */
+
     /* START of Pricing */
     .pricing-head_before {
         @apply before:absolute before:-bottom-44 before:left-1/5 before:h-96 before:w-13/20 before:bg-s4/50 before:blur-[200px] before:content-[''];
