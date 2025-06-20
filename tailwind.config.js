@@ -82,6 +82,9 @@ export default {
                 256: '0 0 256px',
                 100: '0 0 100%',
             },
+            gridTemplateColumns: {
+                section: '53% 47%',
+            },
         },
     },
     plugins: [],

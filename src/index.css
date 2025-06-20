@@ -101,8 +101,8 @@
     .small-compact {
         @apply text-[12px] font-semibold leading-[18px] tracking-[0.03em];
     }
-
     /* END of Typography */
+
     /* START of Gradients */
     .bg1 {
         background: rgba(255, 255, 255, 0.3);
@@ -110,10 +110,6 @@
 
     .bg2 {
         background: rgba(0, 177, 255, 0.12);
-    }
-
-    .bg3 {
-        background: blue;
     }
 
     .bg-btn {
@@ -246,11 +242,15 @@
 
     /* Start of Section */
     .section-title {
-        @apply text-p1 text-[62px] font-extrabold;
+        @apply text-p1 text-[62px] leading-[1em] font-extrabold py-[65px];
     }
 
     .section-title-bg {
-        @apply bg2;
+        @apply bg2 backdrop-blur-[22px] rounded-e-[25px] shadow-100;
+    }
+
+    .section-title-bg-before {
+        @apply before:content-[''] before:absolute before:top-0 before:-left-[100vw] before:w-[200vw] before:h-full before:bg2 before:-z-10;
     }
     /* END of Section */
 
