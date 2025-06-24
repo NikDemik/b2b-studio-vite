@@ -83,7 +83,7 @@ export default {
                 100: '0 0 100%',
             },
             gridTemplateColumns: {
-                section: '53% 47%',
+                service: '55% 45%',
             },
         },
     },

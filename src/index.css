@@ -51,7 +51,7 @@
     }
 
     .h3 {
-        @apply text-[48px] font-semibold leading-[56px] tracking-[-0.02em];
+        @apply text-[60px] max-xl:text-[48px] max-md:text-[32px] leading-[1em] font-extrabold;
     }
 
     .h4 {
@@ -67,7 +67,7 @@
     }
 
     .body-1 {
-        @apply text-[33px] font-light;
+        @apply text-[33px] max-xl:text-[28px] font-light;
     }
 
     .body-2 {
@@ -155,8 +155,8 @@
     .g9 {
         background: linear-gradient(#080d27, transparent);
     }
-
     /* END of Gradients */
+
     /* START of Common */
     .container {
         @apply mx-auto max-w-[1920px]  px-28 max-xl:px-10 max-lg:px-6 max-sm:px-4;
@@ -190,8 +190,8 @@
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
     }
-
     /* END of Common */
+
     /* START of Header */
     .nav-active {
         @apply text-p1;
@@ -240,17 +240,13 @@
     }
     /* END of Feature */
 
-    /* Start of Section */
-    .section-title {
-        @apply text-p1 text-[62px] leading-[1em] font-extrabold py-[65px];
+    /* Start of Service */
+    .service-title {
+        @apply pl-28 text-p1 text-[62px] max-xl:text-[48px] max-lg:text-[32px] leading-[1em] font-extrabold py-[65px];
     }
 
-    .section-title-bg {
+    .service-title-bg {
         @apply bg2 backdrop-blur-[22px] rounded-e-[25px] shadow-100;
-    }
-
-    .section-title-bg-before {
-        @apply before:content-[''] before:absolute before:top-0 before:-left-[100vw] before:w-[200vw] before:h-full before:bg2 before:-z-10;
     }
     /* END of Section */
 
