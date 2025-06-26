@@ -250,6 +250,12 @@
     }
     /* END of Section */
 
+    /* Start of Swiper */
+    .swiper {
+        @apply py-[18px] !important;
+    }
+    /* END of Swiper */
+
     /* START of Pricing */
     .pricing-head_before {
         @apply before:absolute before:-bottom-44 before:left-1/5 before:h-96 before:w-13/20 before:bg-s4/50 before:blur-[200px] before:content-[''];

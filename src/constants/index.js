@@ -19,6 +19,67 @@ export const advantage = [
     },
 ];
 
+export const portfolio_sw1 = [
+    {
+        id: '0',
+        src: '/images/portfolio/01.png',
+        alt: 'slider img',
+    },
+    {
+        id: '1',
+        src: '/images/portfolio/02.png',
+        alt: 'slider img',
+    },
+    {
+        id: '2',
+        src: '/images/portfolio/03.png',
+        alt: 'slider img',
+    },
+    {
+        id: '3',
+        src: '/images/portfolio/02.png',
+        alt: 'slider img',
+    },
+];
+
+export const portfolio_sw2 = [
+    {
+        id: '0',
+        src: '/images/portfolio/04.png',
+        alt: 'slider img',
+    },
+    {
+        id: '1',
+        src: '/images/portfolio/05.png',
+        alt: 'slider img',
+    },
+    {
+        id: '2',
+        src: '/images/portfolio/06.png',
+        alt: 'slider img',
+    },
+    {
+        id: '3',
+        src: '/images/portfolio/05.png',
+        alt: 'slider img',
+    },
+];
+
+export const contacts = [
+    {
+        id: '0',
+        text: 'Звоните: +7 (499) 322-94-41 ',
+    },
+    {
+        id: '1',
+        text: 'Пишите: mail@b2b-studio.ru',
+    },
+    {
+        id: '2',
+        text: 'Московская область, город Долгопрудный, Лихачевский проспект, 46, строение 1, этаж 3, офис №8',
+    },
+];
+
 export const features = [
     {
         id: '0',
