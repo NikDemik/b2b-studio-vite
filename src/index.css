@@ -63,7 +63,7 @@
     }
 
     .h6 {
-        @apply text-[24px] font-medium leading-[36px];
+        @apply text-[25px] font-extrabold leading-[1em] tracking-[0.07em] uppercase;
     }
 
     .body-1 {
@@ -87,7 +87,7 @@
     }
 
     .base-small {
-        @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+        @apply text-[17px] font-normal leading-[1em];
     }
 
     .small-1 {

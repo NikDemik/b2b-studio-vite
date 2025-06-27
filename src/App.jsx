@@ -1,6 +1,7 @@
 import Advantage from './sections/Advantage';
 import Contact from './sections/Contact';
 import Features from './sections/Features';
+import Footer from './sections/Footer';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
 import Portfolio from './sections/Portfolio';
@@ -18,8 +19,9 @@ const App = () => {
             <Portfolio />
             <Question />
             <Contact />
-            <Features />
-            <Pricing />
+            <Footer />
+            {/* <Features />
+            <Pricing /> */}
         </main>
     );
 };

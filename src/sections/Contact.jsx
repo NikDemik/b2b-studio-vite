@@ -1,12 +1,12 @@
 import { Element } from 'react-scroll';
 import { contacts } from '../constants';
 import { CheckIcon } from '../components/CheckIcon';
-import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
+import YandexMap from '../components/YandexMap';
 
 const Contact = () => {
     return (
         <section className=" my-36">
-            <Element name="contact" className=" relative">
+            <Element name="контакты" className=" relative">
                 <div className="container-full">
                     <div className=" flex items-center mb-[36px]">
                         <img src="/images/advantage.png" alt="Icon" />
@@ -25,19 +25,8 @@ const Contact = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className=" w-[1528px] h-[541px]">
-                        <YMaps>
-                            <Map
-                                defaultState={{
-                                    center: [55.75, 37.57],
-                                    zoom: 9,
-                                    controls: ['zoomControl', 'fullscreenControl'],
-                                }}
-                                modules={['control.ZoomControl', 'control.FullscreenControl']}
-                            >
-                                <Placemark defaultGeometry={[55.75, 37.57]} />
-                            </Map>
-                        </YMaps>
+                    <div className=" max-w-[1528px] min-h-[100%] rounded-[24px] overflow-hidden">
+                        <YandexMap />
                     </div>
                 </div>
             </Element>

@@ -8,7 +8,7 @@ export default {
                 p2: '#3e8dff',
                 p3: '#fff',
                 p4: '#000',
-                p5: '#C4CBF5',
+                p5: '#1b1717',
                 s1: '#fff',
                 s2: '#fff',
                 s3: '#334679',
