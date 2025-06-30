@@ -1,3 +1,13 @@
-export default function Contacts() {
-    return <h1>Добро пожаловать на страницу контакты!</h1>;
-}
+import Contact from '../../components/Contact';
+import Hero from '../../components/Hero';
+
+const Home = () => {
+    return (
+        <main className="overflow-hidden ">
+            <Hero />
+            <Contact />
+        </main>
+    );
+};
+
+export default Home;

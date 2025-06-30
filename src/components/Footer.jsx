@@ -1,6 +1,5 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import { Element } from 'react-scroll';
-import Contacts from '../pages/Contacts/Contacts';
 
 const Footer = () => {
     return (
@@ -16,10 +15,11 @@ const Footer = () => {
                         </div>
                         <div>
                             <h6 className=" h6 mb-[40px]">Навигация</h6>
-                            <Link to="/contacts">Контакты</Link>
-                            <Routes>
-                                <Route path="/Contacts" element={<Contacts />} />
-                            </Routes>
+                            <ul>
+                                <li>
+                                    <Link to="/contacts">Контакты</Link>
+                                </li>
+                            </ul>
                         </div>
                         <div>
                             <h6 className=" h6 mb-[40px]">Свяжитесь с нами</h6>

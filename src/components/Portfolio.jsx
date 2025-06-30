@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import { FreeMode, Autoplay } from 'swiper/modules';
-import Slider from '../components/Slider';
+import Slider from './Slider';
 import { portfolio_sw1, portfolio_sw2 } from '../constants';
-import BackgroundObject from '../components/BackgroundObject';
+import BackgroundObject from './BackgroundObject';
 
 const Portfolio = () => {
     return (

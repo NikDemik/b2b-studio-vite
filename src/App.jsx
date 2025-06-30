@@ -1,28 +1,16 @@
-import Advantage from './sections/Advantage';
-import Contact from './sections/Contact';
-import Features from './sections/Features';
-import Footer from './sections/Footer';
-import Header from './sections/Header';
-import Hero from './sections/Hero';
-import Portfolio from './sections/Portfolio';
-import Pricing from './sections/Pricing';
-import Question from './sections/Question';
-import Service from './sections/service';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home/Home';
+import Contacts from './pages/Contacts/Contacts';
 
 const App = () => {
     return (
-        <main className="overflow-hidden ">
-            <Header />
-            <Hero />
-            <Advantage />
-            <Service />
-            <Portfolio />
-            <Question />
-            <Contact />
-            <Footer />
-            {/* <Features />
-            <Pricing /> */}
-        </main>
+        <Routes>
+            <Route path="/" element={<MainLayout />}>
+                <Route index element={<Home />} />
+                <Route path="contacts" element={<Contacts />} />
+            </Route>
+        </Routes>
     );
 };
 
