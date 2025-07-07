@@ -17,7 +17,7 @@ const Service = () => {
                         </div>
                         <div className=" flex flex-col z-2 ml-8">
                             <div className=" flex items-center">
-                                <img src="/images/advantage.png" alt="Icon" />
+                                <img src="/images/icons/advantage.png" alt="Icon" />
                                 <h3 className=" ml-5 h3">Наши услуги</h3>
                             </div>
                             <div className=" pt-8">

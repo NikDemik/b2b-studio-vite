@@ -2,19 +2,19 @@ export const advantage = [
     {
         id: '0',
         text: 'Дизайн, который  работает на результат: стильно, точно, профессионально.',
-        icon: '/images/advantage.png',
+        icon: '/images/icons/advantage.png',
         title: 'icon-advantage',
     },
     {
         id: '1',
         text: 'Это место, где визуал говорит громче слов.',
-        icon: '/images/advantage.png',
+        icon: '/images/icons/advantage.png',
         title: 'icon-advantage',
     },
     {
         id: '2',
         text: ' Каждое решение — под вас: индивидуальный подход в каждом проекте.',
-        icon: '/images/advantage.png',
+        icon: '/images/icons/advantage.png',
         title: 'icon-advantage',
     },
 ];

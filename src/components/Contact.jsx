@@ -1,6 +1,6 @@
 import { Element } from 'react-scroll';
 import { contacts } from '../constants';
-import { CheckIcon } from './CheckIcon';
+import { CheckIcon } from './icons/CheckIcon';
 import YandexMap from './YandexMap';
 
 const Contact = () => {
@@ -9,7 +9,7 @@ const Contact = () => {
             <Element name="контакты" className=" relative">
                 <div className="container-full">
                     <div className=" flex items-center mb-[36px]">
-                        <img src="/images/advantage.png" alt="Icon" />
+                        <img src="/images/icons/advantage.png" alt="Icon" />
                         <h3 className=" ml-5 h3">Контакты</h3>
                     </div>
                     <div className="mb-[65px]">
