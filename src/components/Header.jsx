@@ -1,10 +1,12 @@
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
-import { Link as LinkScroll } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
+// import { Link as LinkScroll } from 'react-scroll';
 
 const Header = () => {
     const [hasScrolled, setHasScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,19 +20,22 @@ const Header = () => {
         };
     }, []);
 
-    const NavLink = ({ title }) => (
-        <LinkScroll
-            onClick={() => setIsOpen(false)}
-            to={title}
-            offset={-100}
-            spy
-            smooth
-            activeClass="nav-active"
-            className="base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 max-2xl:my-4 max-2xl:h5"
-        >
-            {title}
-        </LinkScroll>
-    );
+    // Компонент NavLink с проверкой активного пути
+    const NavLink = ({ title, to }) => {
+        const isActive = location.pathname === to;
+        return (
+            <Link
+                onClick={() => setIsOpen(false)}
+                to={to}
+                className={clsx(
+                    'base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 max-2xl:my-4 max-2xl:h5',
+                    isActive && 'text-p1', // Активный пункт меню
+                )}
+            >
+                {title}
+            </Link>
+        );
+    };
 
     return (
         <header
@@ -52,38 +57,35 @@ const Header = () => {
                 >
                     <div className="max-2xl:relative max-2xl:flex max-2xl:flex-col max-2xl:min-h-screen max-2xl:p-6 max-2xl:overflow-hidden sidebar-before max-md:px-4">
                         <nav className=" flex justify-between max-2xl:relative max-2xl:z-2 max-2xl:my-auto">
-                            <LinkScroll
-                                to="hero"
-                                offset={-250}
-                                spy
-                                smooth
+                            <Link
+                                to="/home"
                                 className={clsx(
                                     'max-2xl:hidden transition-transform duration-500 cursor-pointer',
                                 )}
                             >
                                 <img src="/images/logo.svg" width={192} height={89} alt="logo" />
-                            </LinkScroll>
+                            </Link>
                             <ul className="flex gap-20 max-2xl:block max-2xl:px-12">
                                 <li className="nav-li">
-                                    <NavLink title="главная" />
+                                    <NavLink title="главная" to="/home" />
                                 </li>
                                 <li className="nav-li">
-                                    <NavLink title="о нас" />
+                                    <NavLink title="о нас" to="/about" />
                                 </li>
                                 <li className="nav-li">
-                                    <NavLink title="портфолио" />
+                                    <NavLink title="портфолио" to="/portfolio" />
                                 </li>
                                 <li className="nav-li">
-                                    <NavLink title="услуги" />
+                                    <NavLink title="услуги" to="/services" />
                                 </li>
                                 <li className="nav-li">
-                                    <NavLink title="стоимость" />
+                                    <NavLink title="стоимость" to="/pricing" />
                                 </li>
                                 <li className="nav-li">
-                                    <NavLink title="FAQ" />
+                                    <NavLink title="FAQ" to="/faq" />
                                 </li>
                                 <li className="nav-li">
-                                    <NavLink title="контакты" />
+                                    <NavLink title="контакты" to="/contacts" />
                                 </li>
                             </ul>
                         </nav>

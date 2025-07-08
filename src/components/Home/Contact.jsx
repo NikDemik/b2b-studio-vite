@@ -1,7 +1,7 @@
 import { Element } from 'react-scroll';
-import { contacts } from '../constants';
-import { CheckIcon } from './icons/CheckIcon';
-import YandexMap from './YandexMap';
+import { contacts } from '../../constants';
+import { CheckIcon } from '../icons/CheckIcon';
+import YandexMap from '../YandexMap';
 
 const Contact = () => {
     return (

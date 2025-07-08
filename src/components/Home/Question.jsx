@@ -1,4 +1,6 @@
 import { Element } from 'react-scroll';
+import Accordion from '../Accordion/Accordion';
+import { faq } from '../../constants';
 
 const Question = () => {
     return (
@@ -9,6 +11,7 @@ const Question = () => {
                         <img src="/images/icons/advantage.png" alt="Icon" />
                         <h3 className=" ml-5 h3">Ответы на частые вопросы</h3>
                     </div>
+                    <Accordion items={faq} />
                 </div>
             </Element>
         </section>

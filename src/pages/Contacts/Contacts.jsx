@@ -1,5 +1,5 @@
-import Contact from '../../components/Contact';
-import Hero from '../../components/Hero';
+import Contact from '../../components/Home/Contact';
+import Hero from '../../components/Contacts/Hero';
 
 const Home = () => {
     return (

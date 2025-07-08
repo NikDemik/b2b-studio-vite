@@ -1,9 +1,9 @@
-import Advantage from '../../components/Advantage';
-import Contact from '../../components/Contact';
-import Hero from '../../components/Hero';
-import Portfolio from '../../components/Portfolio';
-import Question from '../../components/Question';
-import Service from '../../components/Service';
+import Advantage from '../../components/Home/Advantage';
+import Contact from '../../components/Home/Contact';
+import Hero from '../../components/Home/Hero';
+import Portfolio from '../../components/Home/Portfolio';
+import Question from '../../components/Home/Question';
+import Service from '../../components/Home/Service';
 
 const Home = () => {
     return (

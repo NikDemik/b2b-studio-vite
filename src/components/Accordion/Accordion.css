@@ -1,0 +1,36 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.accordion-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 36px;
+    cursor: pointer;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon.active {
+    transform: rotate(45deg);
+}
+
+.accordion-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0;
+}
+
+.accordion-answer.active {
+    max-height: 200px;
+    padding: 36px 36px;
+    padding-bottom: 16px;
+}

@@ -1,5 +1,5 @@
 import { Element } from 'react-scroll';
-import { advantage } from '../constants';
+import { advantage } from '../../constants';
 
 const Advantage = () => {
     return (

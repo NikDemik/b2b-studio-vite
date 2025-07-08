@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import { FreeMode, Autoplay } from 'swiper/modules';
-import Slider from './Slider';
-import { portfolio_sw1, portfolio_sw2 } from '../constants';
-import BackgroundObject from './BackgroundObject';
+import Slider from '../Slider';
+import { portfolio_sw1, portfolio_sw2 } from '../../constants';
+import BackgroundObject from '../BackgroundObject';
 
 const Portfolio = () => {
     return (
@@ -75,9 +75,10 @@ const Portfolio = () => {
                         alt="image-bg"
                     />
                 </div> */}
-                <div>
+                {/* Анимация объекта на фоне */}
+                {/* <div>
                     <BackgroundObject baseSpeed={0.2} />
-                </div>
+                </div> */}
             </Element>
         </section>
     );
