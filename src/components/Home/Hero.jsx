@@ -1,5 +1,6 @@
 import { Element, Link as LinkScroll } from 'react-scroll';
 import Button from '../Button';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
@@ -24,16 +25,44 @@ const Hero = () => {
                         </LinkScroll>
                     </div>
 
-                    <div className=" absolute top-[41%] z-1 left-[10%] w-[590px] pointer-events-none">
-                        <img src="/images/hero-l.png" className=" max-lg:h-auto" alt="hero" />
-                    </div>
-                    <div className=" absolute top-0 z-1 left-[calc(66%)] w-[670px] pointer-events-none">
-                        <img src="/images/hero-r.png" className=" max-lg:h-auto" alt="hero" />
-                    </div>
+                    {/* Левое изображение с комплексной анимацией */}
+                    <motion.div
+                        className="absolute top-[41%] z-1 left-[10%] w-[590px] pointer-events-none"
+                        animate={{
+                            y: [-10, 10, -10],
+                            x: [0, 5, 0],
+                            scale: [1, 1.03, 1], // Плавное приближение-отдаление
+                        }}
+                        transition={{
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                        }}
+                    >
+                        <img src="/images/hero-l.png" className="max-lg:h-auto" alt="hero" />
+                    </motion.div>
+
+                    {/* Правое изображение с более выраженной анимацией */}
+                    <motion.div
+                        className="absolute top-0 z-1 left-[calc(66%)] w-[670px] pointer-events-none"
+                        animate={{
+                            y: [-15, 15, -15],
+                            x: [0, 8, 0],
+                            scale: [1, 1.05, 1], // Более заметное изменение масштаба
+                        }}
+                        transition={{
+                            duration: 6,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                            delay: 1,
+                        }}
+                    >
+                        <img src="/images/hero-r.png" className="max-lg:h-auto" alt="hero" />
+                    </motion.div>
                 </div>
             </Element>
             <div className=" absolute -top-0 w-full pointer-events-none">
-                <img src="/images/bg-hero.png" className=" max-lg:h-auto" alt="hero" />
+                <img src="/images/bg/hero.png" className=" max-lg:h-auto" alt="hero" />
             </div>
         </section>
     );

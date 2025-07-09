@@ -5,7 +5,6 @@ import 'swiper/css/free-mode';
 import { FreeMode, Autoplay } from 'swiper/modules';
 import Slider from '../Slider';
 import { portfolio_sw1, portfolio_sw2 } from '../../constants';
-import BackgroundObject from '../BackgroundObject';
 
 const Portfolio = () => {
     return (
@@ -68,17 +67,6 @@ const Portfolio = () => {
                         ))}
                     </Swiper>
                 </div>
-                {/* <div className=" absolute top-[80%] z-0 left-[70%] w-[340px] pointer-events-none">
-                    <img
-                        src="/images/bg-item.png"
-                        className=" max-lg:h-auto rotate-12"
-                        alt="image-bg"
-                    />
-                </div> */}
-                {/* Анимация объекта на фоне */}
-                {/* <div>
-                    <BackgroundObject baseSpeed={0.2} />
-                </div> */}
             </Element>
         </section>
     );

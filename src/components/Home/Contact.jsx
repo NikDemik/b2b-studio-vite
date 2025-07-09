@@ -5,8 +5,8 @@ import YandexMap from '../YandexMap';
 
 const Contact = () => {
     return (
-        <section className=" my-36">
-            <Element name="контакты" className=" relative">
+        <section className=" my-36 ">
+            <Element name="контакты" className=" relative z-2 ">
                 <div className="container-full">
                     <div className=" flex items-center mb-[36px]">
                         <img src="/images/icons/advantage.png" alt="Icon" />

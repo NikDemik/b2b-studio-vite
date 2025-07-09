@@ -29,7 +29,7 @@ const Header = () => {
                 to={to}
                 className={clsx(
                     'base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 max-2xl:my-4 max-2xl:h5',
-                    isActive && 'text-p1', // Активный пункт меню
+                    isActive && ' nav-active', // Активный пункт меню
                 )}
             >
                 {title}

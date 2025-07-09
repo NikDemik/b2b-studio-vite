@@ -1,4 +1,5 @@
 import { Element } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const Service = () => {
     return (
@@ -33,20 +34,51 @@ const Service = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className=" absolute top-[-3%] z-1 left-[2%] w-[480px] pointer-events-none">
+
+                        {/* Верхнее изображение */}
+                        <motion.div
+                            className="absolute top-[2%] z-1 left-[5%] w-[380px] pointer-events-none"
+                            animate={{
+                                y: [-10, 100, -10],
+                                x: [0, 200, 0],
+                                scale: [1, 1.2, 1],
+                                rotateZ: [-0.5, 4, -0.5], // Легкий наклон
+                            }}
+                            transition={{
+                                duration: 30,
+                                repeat: Infinity,
+                                ease: 'easeInOut',
+                                delay: 1,
+                            }}
+                        >
                             <img
-                                src="/images/bg-item.png"
-                                className=" max-lg:h-auto"
-                                alt="service-bg"
+                                src="/images/bg/item.png"
+                                className="max-lg:h-auto"
+                                alt="Картинка фона"
                             />
-                        </div>
-                        <div className=" absolute top-[54%] z-1 left-[20%] w-[300px] pointer-events-none">
+                        </motion.div>
+                        {/* Нижнее изображение */}
+                        <motion.div
+                            className="absolute top-[54%] z-1 left-[20%] w-[220px] pointer-events-none"
+                            animate={{
+                                y: [-10, 100, -10],
+                                x: [0, 100, 0],
+                                scale: [1, 0.8, 1],
+                                rotateZ: [-0.5, 10, -0.5], // Легкий наклон
+                            }}
+                            transition={{
+                                duration: 30,
+                                repeat: Infinity,
+                                ease: 'easeInOut',
+                                delay: 1,
+                            }}
+                        >
                             <img
-                                src="/images/bg-item.png"
-                                className=" max-lg:h-auto"
-                                alt="service-bg"
+                                src="/images/bg/item.png"
+                                className="max-lg:h-auto"
+                                alt="Картинка фона"
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </Element>
