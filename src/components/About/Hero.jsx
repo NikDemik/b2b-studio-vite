@@ -15,12 +15,12 @@ const Hero = () => {
                     </p>
                     <div className="flex w-full gap-[30px]">
                         {/* Первый блок - 50% ширины */}
-                        <div className="w-1/2 pb-14 bg2 backdrop-blur-[22px] shadow-300 rounded-[20px]"></div>
+                        <div className="w-1/2 min-h-[800px] bg-bg2 backdrop-blur-[22px] shadow-300 rounded-[20px]"></div>
 
-                        {/* Второй блок - 50% ширины с тремя одинаковыми внутренними блоками */}
-                        <div className="w-1/2">
-                            <ul className="flex h-full justify-between gap-[30px]">
-                                {/* Все три блока имеют flex-1 для одинаковой ширины */}
+                        {/* Второй блок - 50% ширины с колонкой элементов */}
+                        <div className="w-1/2 flex flex-col h-auto">
+                            {/* Блок с тремя статистиками */}
+                            <ul className="flex justify-between gap-[30px] mb-[30px]">
                                 <li className="flex-1 px-[30px] py-[60px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-p3 font-light text-center">
                                     <p className="text-[60px] leading-[1em]">13 лет</p>
                                     <span className="text-[37px] leading-[1em]">на рынке</span>
@@ -40,6 +40,21 @@ const Hero = () => {
                                     </span>
                                 </li>
                             </ul>
+
+                            {/* Нижняя часть - прижата к низу */}
+                            <div className="mt-auto flex flex-col gap-[30px]">
+                                {/* Плашка с текстом */}
+                                <div className="px-[30px] py-[40px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-center">
+                                    <p className="text-[40px] leading-[1.2] font-light">
+                                        Работаем строго в срок
+                                    </p>
+                                </div>
+
+                                {/* Кнопка */}
+                                <button className="px-[30px] py-[25px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-[30px] leading-[1] font-light transition hover:opacity-90 active:scale-[0.98]">
+                                    Обсудить проект
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,7 +66,7 @@ const Hero = () => {
                         y: [-10, 300, -10],
                         x: [0, 15, 0],
                         scale: [1, 1.03, 1], // Плавное приближение-отдаление
-                        rotateZ: [-0.5, 20, -0.5], // Легкий наклон
+                        rotateZ: [-0.5, 360, -0.5], // Легкий наклон
                     }}
                     transition={{
                         duration: 120,
