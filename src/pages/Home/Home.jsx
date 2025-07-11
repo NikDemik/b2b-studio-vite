@@ -7,7 +7,7 @@ import Service from '../../components/Home/Service';
 
 const Home = () => {
     return (
-        <main className="overflow-hidden ">
+        <main className="overflow-hidden min-h-screen">
             <Hero />
             <Advantage />
             <Service />

@@ -1,6 +1,32 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { DeadlineCard } from './DeadlineCard';
+import { DiscussButton } from './DiscussButton';
+import { StatCard } from './StatCard';
+import { statsData } from '../../constants/index';
+import RequestModal from '../Modal/RequestModal';
 
 const Hero = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { y: 40, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+        },
+    };
+
     return (
         <section className="relative pt-72 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
             <div className="container">
@@ -13,50 +39,49 @@ const Hero = () => {
                         <br />
                         для вашего бизнеса
                     </p>
-                    <div className="flex w-full gap-[30px]">
+                    <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={containerVariants}
+                        className="flex w-full gap-[30px]"
+                    >
                         {/* Первый блок - 50% ширины */}
-                        <div className="w-1/2 min-h-[800px] bg-bg2 backdrop-blur-[22px] shadow-300 rounded-[20px]"></div>
+                        <motion.div
+                            variants={itemVariants}
+                            className=" flex items-center w-full lg:w-1/2 min-h-[600px] lg:min-h-[800px] bg-main"
+                        >
+                            <img src="./images/logo/logo.svg" alt="Логотип B2B-Studio" />
+                        </motion.div>
 
                         {/* Второй блок - 50% ширины с колонкой элементов */}
-                        <div className="w-1/2 flex flex-col h-auto">
+                        <motion.div
+                            variants={itemVariants}
+                            className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8"
+                        >
                             {/* Блок с тремя статистиками */}
-                            <ul className="flex justify-between gap-[30px] mb-[30px]">
-                                <li className="flex-1 px-[30px] py-[60px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-p3 font-light text-center">
-                                    <p className="text-[60px] leading-[1em]">13 лет</p>
-                                    <span className="text-[37px] leading-[1em]">на рынке</span>
-                                </li>
-
-                                <li className="flex-1 px-[30px] py-[60px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-p3 font-light text-center">
-                                    <p className="text-[60px] leading-[1em]">500+</p>
-                                    <span className="text-[37px] leading-[1em]">
-                                        успешных проектов
-                                    </span>
-                                </li>
-
-                                <li className="flex-1 px-[30px] py-[60px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-p3 font-light text-center">
-                                    <p className="text-[60px] leading-[1em]">200+</p>
-                                    <span className="text-[37px] leading-[1em]">
-                                        довольных клиентов
-                                    </span>
-                                </li>
+                            <ul className="flex justify-between gap-8">
+                                {statsData.map((stat, id) => (
+                                    <StatCard key={id} value={stat.value} label={stat.label} />
+                                ))}
                             </ul>
 
                             {/* Нижняя часть - прижата к низу */}
-                            <div className="mt-auto flex flex-col gap-[30px]">
+                            <motion.div
+                                variants={itemVariants}
+                                className="mt-auto flex flex-col gap-6 lg:gap-8"
+                            >
                                 {/* Плашка с текстом */}
-                                <div className="px-[30px] py-[40px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-center">
-                                    <p className="text-[40px] leading-[1.2] font-light">
-                                        Работаем строго в срок
-                                    </p>
-                                </div>
-
+                                <DeadlineCard />
+                                <DeadlineCard />
                                 {/* Кнопка */}
-                                <button className="px-[30px] py-[25px] bg2 backdrop-blur-[22px] shadow-300 rounded-[20px] text-[30px] leading-[1] font-light transition hover:opacity-90 active:scale-[0.98]">
-                                    Обсудить проект
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                                <DiscussButton onClick={() => setIsModalOpen(true)} />
+                                <RequestModal
+                                    isOpen={isModalOpen}
+                                    onClose={() => setIsModalOpen(false)}
+                                />
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
                 </div>
 
                 {/* Верхнее изображение */}
@@ -83,7 +108,7 @@ const Hero = () => {
 
                 {/* Нижнее изображение */}
                 <motion.div
-                    className="absolute top-[95%] z-1 left-[60%] w-[360px] pointer-events-none"
+                    className="absolute top-[55%] z-1 left-[60%] w-[400px] pointer-events-none"
                     animate={{
                         y: [-10, 10, -10],
                         x: [0, 40, 0],

@@ -98,6 +98,21 @@ export const faq = [
     },
 ];
 
+export const statsData = [
+    {
+        value: '13 лет',
+        label: 'на рынке',
+    },
+    {
+        value: '500+',
+        label: 'успешных проектов',
+    },
+    {
+        value: '200+',
+        label: 'довольных клиентов',
+    },
+];
+
 export const features = [
     {
         id: '0',

@@ -46,7 +46,7 @@ const Header = () => {
         >
             <div className="container flex h-14 items-center max-2xl:px-5">
                 <a className="2xl:hidden flex-1 cursor-pointer z-2">
-                    <img src="/images/logo.svg" width={115} height={55} alt="logo" />
+                    <img src="/images/logo/logo.svg" width={115} height={55} alt="logo" />
                 </a>
 
                 <div
@@ -63,7 +63,12 @@ const Header = () => {
                                     'max-2xl:hidden transition-transform duration-500 cursor-pointer',
                                 )}
                             >
-                                <img src="/images/logo.svg" width={192} height={89} alt="logo" />
+                                <img
+                                    src="/images/logo/logo.svg"
+                                    width={192}
+                                    height={89}
+                                    alt="logo"
+                                />
                             </Link>
                             <ul className="flex gap-20 max-2xl:block max-2xl:px-12">
                                 <li className="nav-li">

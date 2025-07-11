@@ -108,8 +108,8 @@
         background: rgba(255, 255, 255, 0.3);
     }
 
-    .bg2 {
-        background: rgba(0, 177, 255, 0.12);
+    .bg-main {
+        @apply bg-bg2 backdrop-blur shadow-100 rounded-3xl;
     }
 
     .bg-btn {
@@ -255,7 +255,7 @@
     }
 
     .service-title-bg {
-        @apply bg2 backdrop-blur-[22px] rounded-e-[25px] shadow-100;
+        @apply bg-bg2 backdrop-blur-[22px] rounded-e-[25px] shadow-100;
     }
     /* END of Section */
 

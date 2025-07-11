@@ -11,7 +11,7 @@ const Advantage = () => {
                             {advantage.map(({ id, text, icon, title }) => (
                                 <li
                                     key={id}
-                                    className="relative flex flex-col justify-between flex-1 pt-16 px-4 pb-14 bg2 backdrop-blur-[22px] shadow-100 rounded-3xl"
+                                    className="relative flex flex-col justify-between flex-1 pt-16 px-4 pb-14 bg-main"
                                 >
                                     <p className=" relative z-2 mx-auto my-0 body-1 max-lg:body-2 text-center">
                                         {text}

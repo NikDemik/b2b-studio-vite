@@ -7,7 +7,7 @@ export default {
                 p1: '#000c63',
                 p2: '#3e8dff',
                 p3: '#fff',
-                p4: '#000',
+                p4: '#000', //text
                 p5: '#1b1717',
                 s1: '#fff',
                 s2: '#fff',
@@ -19,6 +19,9 @@ export default {
                     DEFAULT: '#000000',
                     100: '#05091D',
                 },
+            },
+            backdropBlur: {
+                DEFAULT: '22px',
             },
             boxShadow: {
                 100: '0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(255, 255, 255, 0.05), inset 0 4px 4px 0 rgba(255, 255, 255, 0.15), inset 0 0 68px 0 rgba(255, 255, 255, 0.05)',

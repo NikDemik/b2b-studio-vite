@@ -12,10 +12,7 @@ const Accordion = ({ items }) => {
     return (
         <div className="accordion">
             {items.map((item, index) => (
-                <div
-                    key={index}
-                    className="accordion-item bg2 backdrop-blur-[22px] rounded-[25px] shadow-100 "
-                >
+                <div key={index} className="accordion-item bg-main">
                     <div className="accordion-question" onClick={() => toggleAccordion(index)}>
                         <h3 className=" body-1">{item.question}</h3>
                         <span className={`accordion-icon ${activeIndex === index ? 'active' : ''}`}>
