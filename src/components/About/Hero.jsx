@@ -5,30 +5,18 @@ import { DiscussButton } from './DiscussButton';
 import { StatCard } from './StatCard';
 import { statsData } from '../../constants/index';
 import RequestModal from '../Modal/RequestModal';
+import { ContainerAnimation, ItemAnimation } from '../../constants/animations';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.3,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { y: 40, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-        },
-    };
-
     return (
-        <section className="relative pt-72 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
+        <motion.section
+            initial="hidden"
+            animate="visible"
+            variants={ContainerAnimation}
+            className="relative pt-72 pb-14 max-lg:pt-52 max-lg:pb-10 max-md:pt-36 max-md:pb-6"
+        >
             <div className="container">
                 <div className=" relative z-2 mb-[90px]">
                     <h1 className=" mb-4 h1 text-p4 uppercase max-w-[872px] max-lg:max-w-388 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-4xl max-md:leading-12">
@@ -42,12 +30,12 @@ const Hero = () => {
                     <motion.div
                         initial="hidden"
                         animate="visible"
-                        variants={containerVariants}
+                        variants={ContainerAnimation}
                         className="flex w-full gap-[30px]"
                     >
                         {/* Первый блок - 50% ширины */}
                         <motion.div
-                            variants={itemVariants}
+                            variants={ItemAnimation}
                             className=" flex items-center w-full lg:w-1/2 min-h-[600px] lg:min-h-[800px] bg-main"
                         >
                             <img src="./images/logo/logo.svg" alt="Логотип B2B-Studio" />
@@ -55,7 +43,7 @@ const Hero = () => {
 
                         {/* Второй блок - 50% ширины с колонкой элементов */}
                         <motion.div
-                            variants={itemVariants}
+                            variants={ItemAnimation}
                             className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8"
                         >
                             {/* Блок с тремя статистиками */}
@@ -67,11 +55,10 @@ const Hero = () => {
 
                             {/* Нижняя часть - прижата к низу */}
                             <motion.div
-                                variants={itemVariants}
+                                variants={ItemAnimation}
                                 className="mt-auto flex flex-col gap-6 lg:gap-8"
                             >
                                 {/* Плашка с текстом */}
-                                <DeadlineCard />
                                 <DeadlineCard />
                                 {/* Кнопка */}
                                 <DiscussButton onClick={() => setIsModalOpen(true)} />
@@ -132,7 +119,7 @@ const Hero = () => {
             <div className=" absolute -top-0 w-full pointer-events-none">
                 <img src="/images/bg/hero.png" className=" max-lg:h-auto" alt="hero" />
             </div>
-        </section>
+        </motion.section>
     );
 };
 

@@ -1,5 +1,5 @@
 import Advantage from '../../components/Home/Advantage';
-import Contact from '../../components/Home/Contact';
+import Contact from '../../components/Contacts/Contact';
 import Hero from '../../components/Home/Hero';
 import Portfolio from '../../components/Home/Portfolio';
 import Question from '../../components/Home/Question';

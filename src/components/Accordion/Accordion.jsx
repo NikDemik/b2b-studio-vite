@@ -14,13 +14,13 @@ const Accordion = ({ items }) => {
             {items.map((item, index) => (
                 <div key={index} className="accordion-item bg-main">
                     <div className="accordion-question" onClick={() => toggleAccordion(index)}>
-                        <h3 className=" body-1">{item.question}</h3>
+                        <h3 className=" body-1 ">{item.question}</h3>
                         <span className={`accordion-icon ${activeIndex === index ? 'active' : ''}`}>
                             <Plus />
                         </span>
                     </div>
                     <div className={`accordion-answer ${activeIndex === index ? 'active' : ''}`}>
-                        <p className=" text-[22px]">{item.answer}</p>
+                        <p className=" body-1 ">{item.answer}</p>
                     </div>
                 </div>
             ))}

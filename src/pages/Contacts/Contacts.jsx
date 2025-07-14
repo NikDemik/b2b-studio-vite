@@ -1,4 +1,4 @@
-import Contact from '../../components/Home/Contact';
+import Contact from '../../components/Contacts/Contact';
 import Hero from '../../components/Contacts/Hero';
 
 const Home = () => {

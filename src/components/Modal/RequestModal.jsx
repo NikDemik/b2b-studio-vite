@@ -6,8 +6,9 @@ import { Plus } from '../icons/Plus';
 const RequestModal = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         name: '',
-        phone: '',
+        // phone: '',
         email: '',
+        message: '',
         agreed: false,
     });
 
@@ -48,7 +49,7 @@ const RequestModal = ({ isOpen, onClose }) => {
                 <form onSubmit={handleSubmit}>
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-sm font-medium mb-1">Имя</label>
+                            <label className="block text-sm font-medium mb-1">Имя*</label>
                             <input
                                 type="text"
                                 name="name"
@@ -59,7 +60,7 @@ const RequestModal = ({ isOpen, onClose }) => {
                             />
                         </div>
 
-                        <div>
+                        {/* <div>
                             <label className="block text-sm font-medium mb-1">Телефон</label>
                             <input
                                 type="tel"
@@ -69,10 +70,10 @@ const RequestModal = ({ isOpen, onClose }) => {
                                 className="w-full px-4 py-2 border rounded-lg"
                                 required
                             />
-                        </div>
+                        </div> */}
 
                         <div>
-                            <label className="block text-sm font-medium mb-1">Email</label>
+                            <label className="block text-sm font-medium mb-1">Email*</label>
                             <input
                                 type="email"
                                 name="email"
@@ -80,6 +81,17 @@ const RequestModal = ({ isOpen, onClose }) => {
                                 onChange={handleChange}
                                 className="w-full px-4 py-2 border rounded-lg"
                                 required
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium mb-1">Сообщение</label>
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                className="w-full px-4 py-2 border rounded-lg min-h-[100px]"
+                                placeholder="Опишите ваш проект или задайте вопрос"
                             />
                         </div>
 
@@ -91,6 +103,7 @@ const RequestModal = ({ isOpen, onClose }) => {
                                 checked={formData.agreed}
                                 onChange={handleChange}
                                 className="mt-1 mr-2"
+                                required
                             />
                             <label htmlFor="agreement" className="text-sm">
                                 Я согласен на{' '}

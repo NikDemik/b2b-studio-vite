@@ -26,7 +26,8 @@ export default {
             boxShadow: {
                 100: '0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(255, 255, 255, 0.05), inset 0 4px 4px 0 rgba(255, 255, 255, 0.15), inset 0 0 68px 0 rgba(255, 255, 255, 0.05)',
                 200: 'inset 0 6px 6px 0 rgba(0, 0, 0, 0.15), inset 0 6px 103px 0 rgba(0, 118, 253, 0.05)',
-                300: '0 3px 3px 0 rgba(0, 0, 0, 0.25), 0 3px 3px 0 rgba(255, 255, 255, 0.05), inset 0 3px 3px 0 rgba(255, 255, 255, 0.15), inset 0 0 51px 0 rgba(255, 255, 255, 0.05);',
+                300: '0 3px 3px 0 rgba(0, 0, 0, 0.25), 0 3px 3px 0 rgba(255, 255, 255, 0.05), inset 0 3px 3px 0 rgba(255, 255, 255, 0.15), inset 0 0 51px 0 rgba(255, 255, 255, 0.05)',
+                301: '0 15px 30px -5px rgba(0, 0, 0, 0.15)',
                 400: 'inset 0 3px 3px 0 rgba(255, 255, 255, 0.15), inset 0 0 51px 0 rgba(255, 255, 255, 0.05)',
                 500: '0px 16px 24px rgba(0, 0, 0, 0.25), 0px -14px 48px rgba(40, 51, 111, 0.7)',
             },
