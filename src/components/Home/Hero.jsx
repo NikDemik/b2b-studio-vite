@@ -8,12 +8,10 @@ const Hero = () => {
             <Element name="hero">
                 <div className="container">
                     <div className=" relative z-2 mb-[90px]">
-                        <h1 className=" mb-4 h1 text-p4 uppercase max-w-[872px] max-lg:max-w-388 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-4xl max-md:leading-12">
+                        <h1 className=" mb-4 h1 text-p4 uppercase max-w-[872px] max-lg:max-w-388 max-lg:mb-7 max-md:mb-4">
                             Дизайнерские решения
                         </h1>
-                        <p className="text-[89px] leading-none max-lg:text-[60px] max-md:text-[28px] max-md: font-medium mb-8 ">
-                            для вашего бизнеса
-                        </p>
+                        <p className="h2 mb-8 ">для вашего бизнеса</p>
                         <LinkScroll
                             to="contact"
                             className=" flex max-md:justify-center"

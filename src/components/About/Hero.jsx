@@ -19,14 +19,14 @@ const Hero = () => {
         >
             <div className="container">
                 <div className=" relative z-2 mb-[90px]">
-                    <h1 className=" mb-4 h1 text-p4 uppercase max-w-[872px] max-lg:max-w-388 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-4xl max-md:leading-12">
+                    <h1 className=" mb-4 h1 text-p4 uppercase max-w-[872px] max-lg:max-w-388 max-lg:mb-7 max-md:mb-4">
                         О компании
                     </h1>
-                    <p className="text-[70px] leading-none max-lg:text-[60px] max-md:text-[28px] font-light mb-8 ">
+                    <h2 className="h2 mb-8">
                         B2B Studio – Дизайн и цифровые решения
                         <br />
                         для вашего бизнеса
-                    </p>
+                    </h2>
                     <motion.div
                         initial="hidden"
                         animate="visible"

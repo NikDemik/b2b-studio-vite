@@ -158,6 +158,44 @@ export const stepsAbout = [
     },
 ];
 
+export const works = [
+    {
+        id: 1,
+        category: 'Айдентика',
+        project: 'Ребрандинг троллейный шинопровод',
+        image: '/images/portfolio/identity.jpg',
+        features: ['Фирменный стиль', 'Гайдлайн', 'Анимация'],
+    },
+    {
+        id: 2,
+        category: 'Сайты',
+        project: 'Fitness Platform',
+        image: '/images/portfolio/website.jpg',
+        features: ['Адаптивный дизайн', 'UI/UX', 'Интерактив'],
+    },
+    {
+        id: 3,
+        category: 'Мерч',
+        project: 'Tech Startup Kit',
+        image: '/images/portfolio/merch.jpg',
+        features: ['Упаковка', 'Сувениры', 'Брендинг'],
+    },
+    {
+        id: 4,
+        category: 'Полиграфия',
+        project: 'Fashion Magazine',
+        image: '/images/portfolio/print.jpg',
+        features: ['Верстка', 'Типографика', 'Фотосессия'],
+    },
+    {
+        id: 5,
+        category: 'Реклама',
+        project: 'Cosmetics Campaign',
+        image: '/images/portfolio/ads.jpg',
+        features: ['Креатив', 'Анимация', 'Таргетинг'],
+    },
+];
+
 export const features = [
     {
         id: '0',

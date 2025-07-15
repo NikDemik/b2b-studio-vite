@@ -6,6 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
     const [hasScrolled, setHasScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -25,7 +26,10 @@ const Header = () => {
         const isActive = location.pathname === to;
         return (
             <Link
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                    setIsOpen(false);
+                    setServicesDropdownOpen(false);
+                }}
                 to={to}
                 className={clsx(
                     'base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 max-2xl:my-4 max-2xl:h5',
@@ -34,6 +38,77 @@ const Header = () => {
             >
                 {title}
             </Link>
+        );
+    };
+
+    // Компонент для выпадающего меню
+    const ServicesDropdown = () => {
+        const services = [
+            { title: 'Сайты', to: '/sites' },
+            { title: 'Айдентика', to: '/identity' },
+            { title: 'Полиграфия', to: '/polygraphy' },
+            { title: 'Фотоуслуги', to: '/photo' },
+            { title: 'Реклама', to: '/advertising' },
+        ];
+
+        return (
+            <div className="relative group">
+                <button
+                    className={clsx(
+                        'base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 flex items-center gap-1',
+                        (location.pathname.startsWith('/sites') ||
+                            location.pathname.startsWith('/identity') ||
+                            location.pathname.startsWith('/polygraphy') ||
+                            location.pathname.startsWith('/photo') ||
+                            location.pathname.startsWith('/advertising')) &&
+                            'nav-active',
+                    )}
+                    onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                >
+                    услуги
+                    <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                            servicesDropdownOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                </button>
+
+                <div
+                    className={clsx(
+                        'absolute left-0 mt-2 bg-main rounded-md shadow-lg z-50 transition-all duration-200 overflow-hidden',
+                        servicesDropdownOpen
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-1 pointer-events-none',
+                    )}
+                >
+                    <div className="py-1">
+                        {services.map((service, index) => (
+                            <Link
+                                key={index}
+                                to={service.to}
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    setServicesDropdownOpen(false);
+                                }}
+                                className="block base-bold px-6 py-4 text-p3 hover:text-p1 transition-colors duration-200"
+                            >
+                                {service.title}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
         );
     };
 
@@ -80,8 +155,8 @@ const Header = () => {
                                 <li className="nav-li">
                                     <NavLink title="портфолио" to="/portfolio" />
                                 </li>
-                                <li className="nav-li">
-                                    <NavLink title="услуги" to="/services" />
+                                <li className="nav-li relative">
+                                    <ServicesDropdown />
                                 </li>
                                 <li className="nav-li">
                                     <NavLink title="стоимость" to="/pricing" />

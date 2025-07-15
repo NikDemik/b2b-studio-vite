@@ -43,11 +43,11 @@
     }
 
     .h1 {
-        @apply text-[102px] font-extrabold leading-[136px];
+        @apply text-[6.375rem] max-lg:text-[4.5rem] max-md:text-[2.5rem] font-extrabold leading-none;
     }
 
     .h2 {
-        @apply text-[64px] font-black leading-[64px];
+        @apply text-[4.375rem] max-lg:text-[3.75rem] max-md:text-[1.75rem] font-light leading-none;
     }
 
     .h3 {
@@ -59,7 +59,7 @@
     }
 
     .h5 {
-        @apply text-[32px] font-semibold leading-[40px];
+        @apply text-[2rem] max-xl:text-[1.5rem] max-md:text-[1rem] font-semibold leading-none;
     }
 
     .h6 {
