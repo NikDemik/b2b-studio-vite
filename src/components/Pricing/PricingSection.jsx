@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Button from '../Button';
+import PricingBtn from './PricingBtn';
 import { pricingData } from '../../constants/pricing';
+import RequestModal from '../Modal/RequestModal';
 
 const PricingSection = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <div className=" relative container-full z-2 space-y-16 md:space-y-24">
             {pricingData.map((item) => (
@@ -26,16 +30,13 @@ const PricingSection = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2, duration: 0.6 }}
-                            className="md:w-1/2 h-[400px] md:h-[700px] rounded-xl overflow-hidden relative"
+                            className="md:w-1/2 h-[400px] md:h-[700px] rounded-l-3xl overflow-hidden relative"
                         >
                             <img
                                 src={item.image}
                                 alt={item.category}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute bottom-4 left-0 right-0 flex justify-center">
-                                <Button className="mx-auto">Обсудить проект</Button>
-                            </div>
                         </motion.div>
 
                         {/* Правая часть - список цен */}
@@ -44,9 +45,9 @@ const PricingSection = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3, duration: 0.6 }}
-                            className="md:w-1/2"
+                            className=" relative flex flex-col justify-between  md:w-1/2  p-6"
                         >
-                            <ul className="space-y-4 text-lg">
+                            <ul className="space-y-4 text-xl">
                                 {item.items.map((priceItem, index) => (
                                     <li
                                         key={index}
@@ -58,6 +59,19 @@ const PricingSection = () => {
                                     </li>
                                 ))}
                             </ul>
+                            <div className="flex justify-center">
+                                <PricingBtn
+                                    onClick={() => {
+                                        setIsModalOpen(true);
+                                    }}
+                                >
+                                    обсудить проект
+                                </PricingBtn>
+                                <RequestModal
+                                    isOpen={isModalOpen}
+                                    onClose={() => setIsModalOpen(false)}
+                                />
+                            </div>
                         </motion.div>
                     </div>
                 </div>
