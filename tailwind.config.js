@@ -9,6 +9,7 @@ export default {
                 p3: '#fff',
                 p4: '#000', //text
                 p5: '#1b1717',
+                p6: '#9d9d9c', //text grey
                 s1: '#fff',
                 s2: '#fff',
                 s3: '#334679',

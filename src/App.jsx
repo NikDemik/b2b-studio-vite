@@ -6,7 +6,8 @@ import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio';
 import FAQ from './pages/FAQ/FAQ';
 import Pricing from './pages/Pricing/Pricing';
-import Services from './pages/Services/Services';
+import Sites from './pages/Sites/Sites';
+import IdentityPage from './pages/Identity/Identity';
 
 const App = () => {
     return (
@@ -15,7 +16,8 @@ const App = () => {
                 <Route index path="home" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="portfolio" element={<Portfolio />} />
-                <Route path="services" element={<Services />} />
+                <Route path="sites" element={<Sites />} />
+                <Route path="identity" element={<IdentityPage />} />
                 <Route path="pricing" element={<Pricing />} />
                 <Route path="faq" element={<FAQ />} />
                 <Route path="contacts" element={<Contacts />} />
