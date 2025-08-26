@@ -4,9 +4,9 @@ import ButtonServicesPages from './ButtonServicesPages';
 
 const WebsiteServices = ({ title, image }) => {
     return (
-        <section className="relative pt-72 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
+        <section className="relative pt-72 pb-32 max-lg:pt-52 max-lg:pb-8 max-md:pt-36 max-md:pb-24">
             <div className="container">
-                <div className=" relative z-2 w-full  rounded-3xl">
+                <div className=" relative z-2 w-full shadow-400 rounded-3xl">
                     <div className="flex flex-col md:flex-row">
                         {/* Левый блок (30%) */}
                         <motion.div
@@ -14,7 +14,7 @@ const WebsiteServices = ({ title, image }) => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: '-50px' }}
                             transition={{ duration: 0.6 }}
-                            className="w-full md:w-[40%] flex flex-col gap-10 items-start justify-center p-8 border-8 border-white md:rounded-l-3xl"
+                            className="w-full md:w-[40%] flex flex-col gap-10 items-start justify-center p-8 border-[6px] border-white md:rounded-l-3xl"
                         >
                             <h1 className="h1 uppercase">Наши услуги</h1>
                             <Button className="mt-4">Обсудить проект</Button>

@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 const ServiceDescription = ({ title, services }) => {
     return (
-        <div className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">{title}</h2>
+        <div className="container-full relative z-2 mx-auto px-4 pb-16">
+            <h2 className="text-3xl md:text-6xl font-semibold mb-12 text-start">{title}</h2>
 
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-full mx-auto space-y-20">
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
@@ -15,9 +15,9 @@ const ServiceDescription = ({ title, services }) => {
                         transition={{ delay: index * 0.1 }}
                         className="group"
                     >
-                        <h3 className="text-2xl font-bold mb-2">{service.name}</h3>
-                        <div className="bg-white/80 backdrop-blur-[10px] shadow-200 rounded-xl p-6">
-                            <p className="text-lg">{service.description}</p>
+                        <h3 className="text-3xl font-light mb-8">● {service.name}</h3>
+                        <div className="bg-main p-6">
+                            <p className="text-3xl font-light">{service.description}</p>
                         </div>
                     </motion.div>
                 ))}

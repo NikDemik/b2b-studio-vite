@@ -12,8 +12,8 @@ import IdentityPage from './pages/Identity/Identity';
 const App = () => {
     return (
         <Routes>
-            <Route path="/" element={<MainLayout />}>
-                <Route index path="home" element={<Home />} />
+            <Route element={<MainLayout />}>
+                <Route index path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="portfolio" element={<Portfolio />} />
                 <Route path="sites" element={<Sites />} />

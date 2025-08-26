@@ -133,7 +133,7 @@ const Header = () => {
                     <div className="max-2xl:relative max-2xl:flex max-2xl:flex-col max-2xl:min-h-screen max-2xl:p-6 max-2xl:overflow-hidden sidebar-before max-md:px-4">
                         <nav className=" flex justify-between max-2xl:relative max-2xl:z-2 max-2xl:my-auto">
                             <Link
-                                to="/home"
+                                to="/"
                                 className={clsx(
                                     'max-2xl:hidden transition-transform duration-500 cursor-pointer',
                                 )}
@@ -147,7 +147,7 @@ const Header = () => {
                             </Link>
                             <ul className="flex gap-20 max-2xl:block max-2xl:px-12">
                                 <li className="nav-li">
-                                    <NavLink title="главная" to="/home" />
+                                    <NavLink title="главная" to="/" />
                                 </li>
                                 <li className="nav-li">
                                     <NavLink title="о нас" to="/about" />

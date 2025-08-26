@@ -1,11 +1,21 @@
-import HeroSites from '../../components/Sites/HeroSites';
+import ServicePageLayout from '../../components/Services/ServicesPageLayout';
 
-const Sites = () => {
+const WebsitesPage = () => {
+    const services = [
+        {
+            name: 'Корпоративные сайты',
+            description: 'Полнофункциональные решения для бизнеса',
+        },
+        // ... другие услуги
+    ];
+
     return (
-        <main className="overflow-hidden ">
-            <HeroSites />
-        </main>
+        <ServicePageLayout
+            title="Сайты"
+            image="/images/services/hero_img_sites.jpg"
+            services={services}
+        />
     );
 };
 
-export default Sites;
+export default WebsitesPage;
