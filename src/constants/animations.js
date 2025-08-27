@@ -5,7 +5,7 @@ export const ContainerAnimation = {
         opacity: 1,
         transition: {
             staggerChildren: 0.2,
-            delayChildren: 0.5,
+            delayChildren: 0.3,
         },
     },
 };
@@ -16,7 +16,7 @@ export const ItemAnimation = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 0.5,
+            duration: 0.3,
             ease: 'easeOut',
         },
     },

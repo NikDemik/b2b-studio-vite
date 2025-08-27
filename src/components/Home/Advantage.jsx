@@ -6,7 +6,7 @@ const Advantage = () => {
         <section>
             <Element name="advantage">
                 <div className="container-full">
-                    <div className=" relative z-2">
+                    <div className=" relative z-1">
                         <ul className="relative flex gap-8 justify-between flex-grow max-md:hidden">
                             {advantage.map(({ id, text, icon, title }) => (
                                 <li

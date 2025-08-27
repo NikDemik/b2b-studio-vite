@@ -1,8 +1,12 @@
 import { Element, Link as LinkScroll } from 'react-scroll';
+import { useState } from 'react';
 import Button from '../Button';
 import { motion } from 'framer-motion';
+import RequestModal from '../Modal/RequestModal';
 
 const Hero = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="relative pt-72 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
             <Element name="hero">
@@ -12,15 +16,13 @@ const Hero = () => {
                             Дизайнерские решения
                         </h1>
                         <p className="h2 mb-8 ">для вашего бизнеса</p>
-                        <LinkScroll
-                            to="contact"
-                            className=" flex max-md:justify-center"
-                            offset={-100}
-                            spy
-                            smooth
-                        >
-                            <Button>обсудить проект</Button>
-                        </LinkScroll>
+                        <div className=" flex max-md:justify-center">
+                            <Button onClick={() => setIsModalOpen(true)}>обсудить проект</Button>
+                            <RequestModal
+                                isOpen={isModalOpen}
+                                onClose={() => setIsModalOpen(false)}
+                            />
+                        </div>
                     </div>
 
                     {/* Левое изображение с комплексной анимацией */}

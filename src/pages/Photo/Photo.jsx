@@ -1,8 +1,8 @@
 import ServicePageLayout from '../../components/Services/ServicesPageLayout';
 import { servicesData } from '../../constants/services';
 
-const IdentityPage = () => {
-    return <ServicePageLayout serviceData={servicesData.identity} />;
+const PhotoPage = () => {
+    return <ServicePageLayout serviceData={servicesData.photo} />;
 };
 
-export default IdentityPage;
+export default PhotoPage;

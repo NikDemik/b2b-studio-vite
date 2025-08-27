@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Button from '../Button';
+import RequestModal from '../Modal/RequestModal';
 
 const Hero = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="relative pt-72 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
             <div className="container">
@@ -12,6 +17,10 @@ const Hero = () => {
                         Оставьте заявку и мы обязательно
                         <br /> с вами свяжемся
                     </p>
+                    <div className=" flex max-md:justify-center">
+                        <Button onClick={() => setIsModalOpen(true)}>обсудить проект</Button>
+                        <RequestModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+                    </div>
                 </div>
 
                 {/* Левое изображение */}

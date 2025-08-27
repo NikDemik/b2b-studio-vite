@@ -1,9 +1,22 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import RequestButton from './RequestButton';
 import { Plus } from '../icons/Plus';
 
 const RequestModal = ({ isOpen, onClose }) => {
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('modal-open');
+        } else {
+            document.body.classList.remove('modal-open');
+        }
+
+        return () => {
+            document.body.classList.remove('modal-open');
+        };
+    }, [isOpen]);
+
     const [formData, setFormData] = useState({
         name: '',
         // phone: '',
@@ -33,9 +46,9 @@ const RequestModal = ({ isOpen, onClose }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4"
         >
-            <div className="bg-white rounded-xl p-6 w-full max-w-md">
+            <div className="bg-white rounded-xl p-6 w-full max-w-md relative z-[10000]">
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-4xl font-normal">Оставить заявку</h3>
                     <button
@@ -107,7 +120,11 @@ const RequestModal = ({ isOpen, onClose }) => {
                             />
                             <label htmlFor="agreement" className="text-sm">
                                 Я согласен на{' '}
-                                <a href="/agreement" className="text-blue-600 hover:underline">
+                                <a
+                                    href="/privacy-policy"
+                                    target="_blank"
+                                    className="text-p2 hover:underline"
+                                >
                                     обработку персональных данных
                                 </a>
                             </label>

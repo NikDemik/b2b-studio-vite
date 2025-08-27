@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer>
             <Element name="footer" className=" relative">
-                <div className="container-full bg-p5 h-[623px]">
+                <div className="container-full bg-p5 h-[523px]">
                     <div className=" flex items-start justify-between gap-[200px] max-xl:gap-[100px] max-lg:gap-[50px] pt-[54px] text-p3 mb-9">
                         <div>
                             <h6 className=" h6 mb-[40px]">Информация</h6>
@@ -63,9 +63,9 @@ const Footer = () => {
                                     mail@b2b-studio.ru
                                 </a>
                             </div>
-                            <Link to="/contacts">
+                            {/* <Link to="/contacts">
                                 <ButtonFooter>Почта</ButtonFooter>
-                            </Link>
+                            </Link> */}
                             <Link to="/contacts">
                                 <ButtonFooter containerClassName={'px-[40px] text-[15px]'}>
                                     Задать вопрос
@@ -80,7 +80,10 @@ const Footer = () => {
                             <br />
                             <br /> <span>Проект B2B-Studio.ru</span>
                         </p>
-                        <Link to="/contacts">Правила портала и отказ от ответственности</Link>
+                        <div>
+                            <a href="/privacy-policy">Правила портала и отказ от ответственности</a>
+                        </div>
+                        {/* <Link to="/contacts">Правила портала и отказ от ответственности</Link> */}
                     </div>
                 </div>
             </Element>

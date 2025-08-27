@@ -8,7 +8,7 @@ const PricingSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className=" relative container-full z-2 space-y-16 md:space-y-24">
+        <div className="container-full relative z-1 space-y-16 md:space-y-24">
             {pricingData.map((item) => (
                 <div key={item.id} className="group">
                     {/* Верхний блок с категорией */}
@@ -59,7 +59,7 @@ const PricingSection = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <div className="flex justify-center">
+                            {/* <div className="flex justify-center">
                                 <PricingBtn
                                     onClick={() => {
                                         setIsModalOpen(true);
@@ -71,7 +71,7 @@ const PricingSection = () => {
                                     isOpen={isModalOpen}
                                     onClose={() => setIsModalOpen(false)}
                                 />
-                            </div>
+                            </div> */}
                         </motion.div>
                     </div>
                 </div>

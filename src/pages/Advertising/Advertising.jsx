@@ -1,8 +1,8 @@
 import ServicePageLayout from '../../components/Services/ServicesPageLayout';
 import { servicesData } from '../../constants/services';
 
-const IdentityPage = () => {
-    return <ServicePageLayout serviceData={servicesData.identity} />;
+const AdvertisingPage = () => {
+    return <ServicePageLayout serviceData={servicesData.advertising} />;
 };
 
-export default IdentityPage;
+export default AdvertisingPage;

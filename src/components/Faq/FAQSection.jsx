@@ -30,11 +30,11 @@ const FAQSection = () => {
                                 className="bg-main p-6 cursor-pointer flex justify-between items-center"
                                 onClick={() => toggleAnswer(index)}
                             >
-                                <h3 className="text-xl font-medium">{item.question}</h3>
+                                <h3 className="text-3xl font-light">{item.question}</h3>
                                 <motion.div
                                     animate={{ rotate: activeIndex === index ? 45 : 0 }}
                                     transition={{ duration: 0.3 }}
-                                    className="text-2xl"
+                                    className="text-3xl"
                                 >
                                     +
                                 </motion.div>
@@ -49,7 +49,7 @@ const FAQSection = () => {
                                         transition={{ duration: 0.3 }}
                                     >
                                         <div className="bg-main p-6 mt-6">
-                                            <p>{item.answer}</p>
+                                            <p className="text-2xl font-light">{item.answer}</p>
                                         </div>
                                     </motion.div>
                                 )}

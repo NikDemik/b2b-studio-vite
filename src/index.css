@@ -379,4 +379,22 @@
     }
 
     /*  END of Footer*/
+
+    /* Модальное окно */
+    /* Гарантируем, что модальное окно поверх всего */
+    .modal-overlay {
+        z-index: 9999 !important;
+        position: fixed !important;
+    }
+
+    .modal-content {
+        z-index: 10000 !important;
+        position: relative !important;
+    }
+
+    /* Отключаем скролл body когда модальное открыто */
+    body.modal-open {
+        overflow: hidden;
+    }
+    /*END Модальное окно */
 }

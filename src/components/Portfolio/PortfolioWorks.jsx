@@ -7,7 +7,7 @@ import RequestModal from '../Modal/RequestModal';
 const PortfolioWorks = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
-        <div className=" container-full space-y-8 md:space-y-12 mb-8">
+        <div className=" container-full relative z-1 space-y-8 md:space-y-12 mb-8">
             {works.map((work) => (
                 <div key={work.id} className="group">
                     {/* Верхний блок с категорией */}

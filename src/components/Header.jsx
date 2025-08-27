@@ -44,7 +44,7 @@ const Header = () => {
     // Компонент для выпадающего меню
     const ServicesDropdown = () => {
         const services = [
-            { title: 'Сайты', to: '/sites' },
+            { title: 'Сайты', to: '/websites' },
             { title: 'Айдентика', to: '/identity' },
             { title: 'Полиграфия', to: '/polygraphy' },
             { title: 'Фотоуслуги', to: '/photo' },
@@ -56,7 +56,7 @@ const Header = () => {
                 <button
                     className={clsx(
                         'base-bold text-p3 transition-colors duration-500 cursor-pointer hover:text-p1 flex items-center gap-1',
-                        (location.pathname.startsWith('/sites') ||
+                        (location.pathname.startsWith('/websites') ||
                             location.pathname.startsWith('/identity') ||
                             location.pathname.startsWith('/polygraphy') ||
                             location.pathname.startsWith('/photo') ||
@@ -86,7 +86,7 @@ const Header = () => {
 
                 <div
                     className={clsx(
-                        'absolute left-0 mt-2 bg-main rounded-md shadow-lg z-50 transition-all duration-200 overflow-hidden',
+                        'absolute left-0 mt-2 bg-p2 backdrop-blur shadow-100 rounded-3xl  z-50 transition-all duration-200 overflow-hidden',
                         servicesDropdownOpen
                             ? 'opacity-100 translate-y-0'
                             : 'opacity-0 translate-y-1 pointer-events-none',
@@ -101,7 +101,7 @@ const Header = () => {
                                     setIsOpen(false);
                                     setServicesDropdownOpen(false);
                                 }}
-                                className="block base-bold px-6 py-4 text-p3 hover:text-p1 transition-colors duration-200"
+                                className="block base-bold px-10 py-4 text-p3 hover:text-p1 transition-colors duration-200"
                             >
                                 {service.title}
                             </Link>
