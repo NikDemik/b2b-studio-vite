@@ -81,7 +81,9 @@ const Footer = () => {
                             <br /> <span>Проект B2B-Studio.ru</span>
                         </p>
                         <div>
-                            <a href="/privacy-policy">Правила портала и отказ от ответственности</a>
+                            <a href="/privacy-policy" target="_blank">
+                                Правила портала и отказ от ответственности
+                            </a>
                         </div>
                         {/* <Link to="/contacts">Правила портала и отказ от ответственности</Link> */}
                     </div>
