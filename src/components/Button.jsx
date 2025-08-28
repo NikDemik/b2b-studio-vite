@@ -16,7 +16,7 @@ const Button = ({ children, href, containerClassName, onClick }) => {
     ) : (
         <button
             className={clsx(
-                'relative flex items-center max-md:mt-[140px] max-md:justify-center min-h-[60px] px-[76px] max-md:px-[44px] py-[36px] max-md:py-[22px] bg-btn backdrop-blur-[22px] rounded-full shadow-200 inner-before group-hover:before:opacity-100 overflow-hidden hover:bg-btn-hov transition-all duration-500',
+                'relative flex items-center max-md:mt-[140px] max-md:justify-center min-h-[60px] px-16 max-md:px-[44px] py-6 max-md:py-[22px] bg-btn backdrop-blur-[22px] rounded-full shadow-200 inner-before group-hover:before:opacity-100 overflow-hidden hover:bg-btn-hov transition-all duration-500',
                 containerClassName,
             )}
             onClick={onClick}

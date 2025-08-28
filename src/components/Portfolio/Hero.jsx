@@ -7,13 +7,13 @@ const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <section className="relative pt-72 pb-40 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
+        <section className="relative pt-60 pb-10 max-lg:pt-52 max-lg:pb-10 max-md:pt-36 max-md:pb-10">
             <div className="container">
-                <div className=" relative z-2 mb-[90px]">
+                <div className="relative z-2 flex items-center justify-between">
                     <h1 className=" mb-4 h1 text-p4 uppercase max-w-[872px] max-lg:max-w-388 max-lg:mb-7 max-md:mb-4">
                         Портфолио
                     </h1>
-                    <p className="h2 mb-8 ">Не просто красиво — эффективно</p>
+                    {/* <p className="h2 mb-8 ">Не просто красиво — эффективно</p> */}
                     <div className=" flex max-md:justify-center">
                         <Button onClick={() => setIsModalOpen(true)}>обсудить проект</Button>
                         <RequestModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

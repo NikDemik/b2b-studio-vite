@@ -1,0 +1,126 @@
+{
+    "categories": ["Все", "Сайты", "Айдентика", "Фотоуслуги", "Полиграфия", "Реклама"],
+
+    "works": [
+        {
+            "id": 1,
+            "title": "Корпоративный сайт для TechCompany",
+            "category": "Сайты",
+            "image": "/images/portfolio/websites/rvd-rukav-ru-fhd.jpg",
+            "description": "Разработка современного корпоративного сайта с адаптивным дизайном",
+            "features": ["Адаптивный дизайн", "UI/UX", "Интерактивные элементы"],
+            "year": 2024,
+            "client": "TechCompany Inc."
+        },
+        {
+            "id": 2,
+            "title": "Фирменный стиль CoffeeDream",
+            "category": "Айдентика",
+            "image": "/images/portfolio/identity-coffee.jpg",
+            "description": "Полный брендбук и айдентика для сети кофеен",
+            "features": ["Логотип", "Фирменный стиль", "Брендбук"],
+            "year": 2024,
+            "client": "CoffeeDream"
+        },
+        {
+            "id": 3,
+            "title": "Предметная фотосъемка для бренда косметики",
+            "category": "Фотоуслуги",
+            "image": "/images/portfolio/photo-cosmetics.jpg",
+            "description": "Профессиональная предметная фотосъемка косметической продукции",
+            "features": ["Предметная съемка", "Ретушь", "Цветокоррекция"],
+            "year": 2023,
+            "client": "CosmeticBrand"
+        },
+        {
+            "id": 4,
+            "title": "Каталог продукции для мебельной фабрики",
+            "category": "Полиграфия",
+            "image": "/images/portfolio/polygraphy-1.jpg",
+            "description": "Дизайн и верстка каталога мебельной продукции",
+            "features": ["Верстка", "Типографика", "Подготовка к печати"],
+            "year": 2023,
+            "client": "МебельнаяФабрика"
+        },
+        {
+            "id": 5,
+            "title": "Рекламная кампания для автомобильного салона",
+            "category": "Реклама",
+            "image": "/images/portfolio/ads-auto.jpg",
+            "description": "Комплексная рекламная кампания включая наружную рекламу и баннеры",
+            "features": ["Билборды", "Социальные сети", "Печатная реклама"],
+            "year": 2024,
+            "client": "AutoSalon Premium"
+        },
+        {
+            "id": 6,
+            "title": "Интернет-магазин преобразователей частоты",
+            "category": "Сайты",
+            "image": "/images/portfolio/websites/drives-vfd-ru.jpg",
+            "description": "Разработка интернет-магазина с системой управления заказами",
+            "features": ["E-commerce", "Корзина покупок", "Система оплаты"],
+            "year": 2023,
+            "client": "Alpark"
+        },
+        {
+            "id": 7,
+            "title": "Айдентика для fitness-центра",
+            "category": "Айдентика",
+            "image": "/images/portfolio/identity-fitness.jpg",
+            "description": "Разработка энергичного фирменного стиля для фитнес-клуба",
+            "features": ["Логотип", "Цветовая палитра", "Мерч"],
+            "year": 2023,
+            "client": "PowerFitness"
+        },
+        {
+            "id": 8,
+            "title": "Фотосъемка интерьеров ресторана",
+            "category": "Фотоуслуги",
+            "image": "/images/portfolio/photo-interior.jpg",
+            "description": "Профессиональная съемка интерьеров премиального ресторана",
+            "features": ["Интерьерная съемка", "Световая схема", "Постобработка"],
+            "year": 2024,
+            "client": "GourmetRestaurant"
+        },
+        {
+            "id": 9,
+            "title": "Брендированная полиграфия для отеля",
+            "category": "Полиграфия",
+            "image": "/images/portfolio/polygraphy-hotel.jpg",
+            "description": "Полный комплект полиграфии для сети отелей",
+            "features": ["Визитки", "Брошюры", "Папки"],
+            "year": 2024,
+            "client": "LuxuryHotels"
+        },
+        {
+            "id": 10,
+            "title": "Digital-кампания для модного бренда",
+            "category": "Реклама",
+            "image": "/images/portfolio/ads-fashion.jpg",
+            "description": "Комплексная digital-кампания в социальных сетях",
+            "features": ["SMM", "Таргетированная реклама", "Креативы"],
+            "year": 2023,
+            "client": "FashionLabel"
+        },
+        {
+            "id": 11,
+            "title": "Лендинг для образовательного курса",
+            "category": "Сайты",
+            "image": "/images/portfolio/website-education.jpg",
+            "description": "Высококонверсионный лендинг для онлайн-курсов",
+            "features": ["Лендинг", "Формы захвата", "Аналитика"],
+            "year": 2024,
+            "client": "EducationPro"
+        },
+        {
+            "id": 12,
+            "title": "Ребрендинг юридической фирмы",
+            "category": "Айдентика",
+            "image": "/images/portfolio/identity-law.jpg",
+            "description": "Современный ребрендинг традиционной юридической компании",
+            "features": ["Ребрендинг", "Гайдлайны", "Адаптация"],
+            "year": 2023,
+            "client": "LegalPartners"
+        }
+    ]
+}

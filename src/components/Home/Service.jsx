@@ -9,11 +9,11 @@ const Service = () => {
                     <div className=" relative mt-20 pt-24 grid grid-cols-service max-md:grid-cols-1">
                         <div className=" max-md:hidden">
                             <ul className=" relative z-2 flex flex-col gap-[2.6rem]">
-                                <li className=" service-title service-title-bg">ФИРМЕННЫЙ СТИЛЬ</li>
-                                <li className=" service-title service-title-bg">ПОЛИГРАФИЯ</li>
-                                <li className=" service-title service-title-bg">РЕКЛАМА</li>
                                 <li className=" service-title service-title-bg">САЙТЫ</li>
-                                <li className=" service-title service-title-bg">МЕРЧ</li>
+                                <li className=" service-title service-title-bg">РЕКЛАМА</li>
+                                <li className=" service-title service-title-bg">ФОТОУСЛУГИ</li>
+                                <li className=" service-title service-title-bg">ПОЛИГРАФИЯ</li>
+                                <li className=" service-title service-title-bg">ФИРМЕННЫЙ СТИЛЬ</li>
                             </ul>
                         </div>
                         <div className=" flex flex-col z-2 ml-8">
