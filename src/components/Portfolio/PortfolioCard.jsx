@@ -16,7 +16,7 @@ const PortfolioCard = ({ work, isWide = false }) => {
             <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                 {/* Бейдж категории */}
                 <div className="mb-2">
-                    <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full border border-white/30">
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full border border-white/30">
                         {work.category}
                     </span>
                 </div>

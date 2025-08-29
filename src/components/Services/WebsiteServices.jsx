@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../Button';
 import ButtonServicesPages from './ButtonServicesPages';
+import RequestModal from '../Modal/RequestModal';
 
 const WebsiteServices = ({ title, image }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="relative pt-72 pb-32 max-lg:pt-52 max-lg:pb-8 max-md:pt-36 max-md:pb-24">
             <div className="container">
@@ -17,7 +21,15 @@ const WebsiteServices = ({ title, image }) => {
                             className="w-full md:w-[40%] flex flex-col gap-10 items-start justify-center p-8 border-[6px] border-white md:rounded-l-3xl"
                         >
                             <h1 className="h1 uppercase">Наши услуги</h1>
-                            <Button className="mt-4">Обсудить проект</Button>
+                            <div className=" flex max-md:justify-center">
+                                <Button onClick={() => setIsModalOpen(true)}>
+                                    обсудить проект
+                                </Button>
+                                <RequestModal
+                                    isOpen={isModalOpen}
+                                    onClose={() => setIsModalOpen(false)}
+                                />
+                            </div>
                         </motion.div>
 
                         {/* Правый блок (70%) */}
@@ -44,7 +56,7 @@ const WebsiteServices = ({ title, image }) => {
                                         </span>
                                     </li>
                                 </ul>
-                                <ButtonServicesPages>Портфолио</ButtonServicesPages>
+                                <ButtonServicesPages to="/portfolio">Портфолио</ButtonServicesPages>
                             </div>
 
                             {/* Изображение */}
@@ -62,7 +74,7 @@ const WebsiteServices = ({ title, image }) => {
 
             {/* Фоновое изображение */}
             <div className=" absolute -top-0 w-full pointer-events-none">
-                <img src="/images/bg/hero.png" className=" max-lg:h-auto" alt="hero" />
+                <img src="/images/bg/hero.jpg" className=" max-lg:h-auto" alt="hero" />
             </div>
         </section>
     );

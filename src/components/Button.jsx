@@ -3,7 +3,7 @@ import clsx from 'clsx';
 const Button = ({ children, href, containerClassName, onClick }) => {
     const Inner = () => (
         <>
-            <span className=" relative z-2 text-p4 text-[36px] max-lg:text-[24px] max-md:text-[16px]">
+            <span className=" relative z-2 text-p4 text-3xl max-lg:text-2xl max-md:text-lg">
                 {children}
             </span>
         </>

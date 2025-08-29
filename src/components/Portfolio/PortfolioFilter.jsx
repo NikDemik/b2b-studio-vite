@@ -55,7 +55,7 @@ const PortfolioFilter = () => {
                     <motion.button
                         key={category}
                         onClick={() => setActiveCategory(category)}
-                        className={`w-full px-6 py-3 rounded-full text-2xl font-medium transition-all ${
+                        className={`w-full px-6 py-3 rounded-full text-xl font-medium transition-all ${
                             activeCategory === category
                                 ? 'bg-blue-600 text-white shadow-100'
                                 : 'bg-white/60 text-gray-700 hover:bg-gray-100 backdrop-blur-sm shadow-100'

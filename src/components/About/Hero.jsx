@@ -117,7 +117,7 @@ const Hero = () => {
                 </motion.div>
             </div>
             <div className=" absolute -top-0 w-full pointer-events-none">
-                <img src="/images/bg/hero.png" className=" max-lg:h-auto" alt="hero" />
+                <img src="/images/bg/hero.jpg" className=" max-lg:h-auto" alt="hero" />
             </div>
         </motion.section>
     );

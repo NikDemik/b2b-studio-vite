@@ -1,5 +1,6 @@
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Service = () => {
     return (
@@ -8,13 +9,23 @@ const Service = () => {
                 <div className="container-full-l">
                     <div className=" relative mt-20 pt-24 grid grid-cols-service max-md:grid-cols-1">
                         <div className=" max-md:hidden">
-                            <ul className=" relative z-2 flex flex-col gap-[2.6rem]">
-                                <li className=" service-title service-title-bg">САЙТЫ</li>
-                                <li className=" service-title service-title-bg">РЕКЛАМА</li>
-                                <li className=" service-title service-title-bg">ФОТОУСЛУГИ</li>
-                                <li className=" service-title service-title-bg">ПОЛИГРАФИЯ</li>
-                                <li className=" service-title service-title-bg">ФИРМЕННЫЙ СТИЛЬ</li>
-                            </ul>
+                            <div className=" relative z-2 flex flex-col gap-[2rem]">
+                                <Link to="/websites" className=" service-title service-title-bg">
+                                    САЙТЫ
+                                </Link>
+                                <Link to="/advertising" className=" service-title service-title-bg">
+                                    РЕКЛАМА
+                                </Link>
+                                <Link to="/photo" className=" service-title service-title-bg">
+                                    ФОТОУСЛУГИ
+                                </Link>
+                                <Link to="/polygraphy" className=" service-title service-title-bg">
+                                    ПОЛИГРАФИЯ
+                                </Link>
+                                <Link to="/identity" className=" service-title service-title-bg">
+                                    ФИРМЕННЫЙ СТИЛЬ
+                                </Link>
+                            </div>
                         </div>
                         <div className=" flex flex-col z-2 ml-8">
                             <div className=" flex items-center">

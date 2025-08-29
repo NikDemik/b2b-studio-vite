@@ -43,15 +43,15 @@
     }
 
     .h1 {
-        @apply text-[6.375rem] max-lg:text-[4.5rem] max-md:text-[2.5rem] font-extrabold leading-none;
+        @apply text-[5rem] max-lg:text-[4.5rem] max-md:text-[2.5rem] font-extrabold leading-none;
     }
 
     .h2 {
-        @apply text-[4.375rem] max-lg:text-[3.75rem] max-md:text-[1.75rem] font-light leading-none;
+        @apply text-[3.25rem] max-lg:text-[3.75rem] max-md:text-[1.75rem] font-light leading-none;
     }
 
     .h3 {
-        @apply text-[3.75rem] max-xl:text-[3rem] max-md:text-[2rem] leading-[1] font-extrabold;
+        @apply text-[2.75rem] max-xl:text-[3rem] max-md:text-[2rem] leading-[1] font-extrabold;
     }
 
     .h4 {
@@ -67,7 +67,7 @@
     }
 
     .body-1 {
-        @apply text-[1.5rem] md:text-[1.875rem] lg:text-[2.25rem] font-light leading-normal;
+        @apply text-lg md:text-xl lg:text-2xl font-light leading-normal;
     }
 
     .body-2 {
@@ -83,7 +83,7 @@
     }
 
     .base-bold {
-        @apply text-[25px] tracking-[0.03em];
+        @apply text-xl tracking-[0.03em];
     }
 
     .base-small {
@@ -254,13 +254,32 @@
     /* END of Feature */
 
     /* Start of Service */
+
     .service-title {
-        @apply pl-28 text-p1 text-[62px] max-xl:text-[48px] max-lg:text-[32px] leading-[1em] font-extrabold py-[65px];
+        @apply pl-28 text-p1 text-5xl max-xl:text-4xl max-lg:text-3xl leading-[1em] font-extrabold py-[3rem] relative overflow-hidden transition-colors duration-300;
     }
 
     .service-title-bg {
-        @apply bg-bg2 backdrop-blur-[22px] rounded-e-[25px] shadow-100;
+        @apply bg-bg2 backdrop-blur-[22px] rounded-e-[1.5rem] shadow-100;
     }
+
+    .service-title-bg::before {
+        content: '';
+        @apply absolute inset-y-0 left-0 bg-p2 transition-all duration-1000 ease-in-out;
+        width: 5%; /* Начальная ширина 5% */
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        z-index: -1;
+    }
+
+    .service-title-bg:hover::before {
+        width: 100%; /* Расширяется до 100% */
+    }
+
+    .service-title-bg:hover {
+        @apply text-white;
+    }
+
     /* END of Section */
 
     /* Start of Swiper */

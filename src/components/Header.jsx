@@ -115,8 +115,8 @@ const Header = () => {
     return (
         <header
             className={clsx(
-                'fixed top-0 left-0 z-50 w-full bg1 backdrop-blur-[22px] shadow-100 py-14 transition-all duration-500 max-2xl:py-4',
-                hasScrolled && 'bg2 py-6',
+                'fixed top-0 left-0 z-50 w-full bg1 backdrop-blur-[22px] shadow-100 py-12 transition-all duration-500 max-2xl:py-4',
+                hasScrolled && 'bg2 py-4',
             )}
         >
             <div className="container flex h-14 items-center max-2xl:px-5">
@@ -140,8 +140,8 @@ const Header = () => {
                             >
                                 <img
                                     src="/images/logo/logo.svg"
-                                    width={192}
-                                    height={89}
+                                    width={160}
+                                    height={70}
                                     alt="logo"
                                 />
                             </Link>

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 const ButtonFooter = ({ children, href, containerClassName, onClick }) => {
     const Inner = () => (
         <>
-            <span className=" relative z-2 text-p3 tracking-[0.1em]  max-lg:text-[22px] max-md:text-[16px]">
+            <span className=" relative z-2 text-p3 tracking-[0.1em] text-2xl max-lg:text-xl max-md:text-lg">
                 {children}
             </span>
         </>
