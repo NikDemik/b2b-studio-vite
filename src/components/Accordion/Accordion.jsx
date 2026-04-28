@@ -16,7 +16,7 @@ const Accordion = ({ items }) => {
                     <div className="accordion-question" onClick={() => toggleAccordion(index)}>
                         <h3 className=" body-1 ">{item.question}</h3>
                         <span className={`accordion-icon ${activeIndex === index ? 'active' : ''}`}>
-                            <Plus />
+                            <Plus size={32} />
                         </span>
                     </div>
                     <div className={`accordion-answer ${activeIndex === index ? 'active' : ''}`}>

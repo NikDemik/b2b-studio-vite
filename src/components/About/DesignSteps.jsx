@@ -1,4 +1,4 @@
-import { stepsAbout } from '../../constants';
+import { useAboutData } from '../../hooks/useAboutData';
 import { motion } from 'framer-motion';
 import {
     viewportSettings,
@@ -8,6 +8,38 @@ import {
 } from '../../constants/animations';
 
 const DesignSteps = () => {
+    const { aboutData, loading, error } = useAboutData();
+
+    if (loading) {
+        return (
+            <div className="flex justify-between gap-8">
+                {[...Array(3)].map((_, index) => (
+                    <div
+                        key={index}
+                        className="flex-1 px-8 py-16 bg-white/80 backdrop-blur-[22px] shadow-300 rounded-xl text-center animate-pulse"
+                    >
+                        <div className="h-16 bg-gray-300 rounded mb-4"></div>
+                        <div className="h-8 bg-gray-300 rounded"></div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+    if (error) {
+        return <div className="text-center text-red-600">Ошибка загрузки статистики</div>;
+    }
+
+    if (!aboutData || !aboutData.stepsAbout) {
+        return (
+            <div className="container mx-auto px-4 py-12">
+                <div className="text-center text-gray-600">
+                    <p>Шаги не найдены</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg2 py-16 md:py-24">
             <div className="container-full mx-auto px-4">
@@ -22,7 +54,7 @@ const DesignSteps = () => {
                 </motion.h3>
 
                 <div className="max-w-full mx-auto space-y-8 md:space-y-12">
-                    {stepsAbout.map((step) => (
+                    {aboutData.stepsAbout.map((step) => (
                         <motion.div
                             key={step.number}
                             initial="hidden"

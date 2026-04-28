@@ -1,4 +1,4 @@
-import { servicesAbout } from '../../constants';
+import { useAboutData } from '../../hooks/useAboutData';
 import { motion } from 'framer-motion';
 import {
     titleAnimation,
@@ -9,6 +9,38 @@ import {
 } from '../../constants/animations';
 
 const ServicesList = () => {
+    const { aboutData, loading, error } = useAboutData();
+
+    if (loading) {
+        return (
+            <div className="flex justify-between gap-8">
+                {[...Array(3)].map((_, index) => (
+                    <div
+                        key={index}
+                        className="flex-1 px-8 py-16 bg-white/80 backdrop-blur-[22px] shadow-300 rounded-xl text-center animate-pulse"
+                    >
+                        <div className="h-16 bg-gray-300 rounded mb-4"></div>
+                        <div className="h-8 bg-gray-300 rounded"></div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+    if (error) {
+        return <div className="text-center text-red-600">Ошибка загрузки статистики</div>;
+    }
+
+    if (!aboutData || !aboutData.servicesAbout) {
+        return (
+            <div className="container mx-auto px-4 py-12">
+                <div className="text-center text-gray-600">
+                    <p>Шаги не найдены</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <section className="container-full mx-auto px-4 py-12 md:py-16">
             <div className="relative">
@@ -29,7 +61,7 @@ const ServicesList = () => {
                     viewport={{ once: true, margin: '-100px' }}
                     className="space-y-6 md:space-y-8 max-w-full mx-auto"
                 >
-                    {servicesAbout.map((service, index) => (
+                    {aboutData.servicesAbout.map((service, index) => (
                         <motion.li
                             key={index}
                             variants={listItemAnimation}

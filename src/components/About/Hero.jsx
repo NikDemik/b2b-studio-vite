@@ -3,12 +3,38 @@ import { motion } from 'framer-motion';
 import { DeadlineCard } from './DeadlineCard';
 import { DiscussButton } from './DiscussButton';
 import { StatCard } from './StatCard';
-import { statsData } from '../../constants/index';
+import { useAboutData } from '../../hooks/useAboutData';
 import RequestModal from '../Modal/RequestModal';
 import { ContainerAnimation, ItemAnimation } from '../../constants/animations';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const { aboutData, loading, error } = useAboutData();
+
+    if (loading) {
+        return (
+            <div className="flex justify-between gap-8">
+                {[...Array(3)].map((_, index) => (
+                    <div
+                        key={index}
+                        className="flex-1 px-8 py-16 bg-white/80 backdrop-blur-[22px] shadow-300 rounded-xl text-center animate-pulse"
+                    >
+                        <div className="h-16 bg-gray-300 rounded mb-4"></div>
+                        <div className="h-8 bg-gray-300 rounded"></div>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+    if (error) {
+        return <div className="text-center text-red-600">Ошибка загрузки статистики</div>;
+    }
+
+    if (!aboutData || !aboutData.statsData) {
+        return null;
+    }
 
     return (
         <motion.section
@@ -36,7 +62,7 @@ const Hero = () => {
                         {/* Первый блок - 50% ширины */}
                         <motion.div
                             variants={ItemAnimation}
-                            className=" flex items-center w-full lg:w-1/2 min-h-[600px] lg:min-h-[800px] bg-main"
+                            className=" flex items-center w-full lg:w-1/2 min-h-[400px] lg:min-h-[600px] bg-main"
                         >
                             <img src="./images/logo/logo.svg" alt="Логотип B2B-Studio" />
                         </motion.div>
@@ -48,8 +74,8 @@ const Hero = () => {
                         >
                             {/* Блок с тремя статистиками */}
                             <ul className="flex justify-between gap-8">
-                                {statsData.map((stat, id) => (
-                                    <StatCard key={id} value={stat.value} label={stat.label} />
+                                {aboutData?.statsData.map((item, index) => (
+                                    <StatCard key={index} value={item.value} label={item.label} />
                                 ))}
                             </ul>
 
