@@ -6,6 +6,7 @@ import { StatCard } from './StatCard';
 import { useAboutData } from '../../hooks/useAboutData';
 import RequestModal from '../Modal/RequestModal';
 import { ContainerAnimation, ItemAnimation } from '../../constants/animations';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -87,11 +88,14 @@ const Hero = () => {
                                 {/* Плашка с текстом */}
                                 <DeadlineCard />
                                 {/* Кнопка */}
-                                <DiscussButton onClick={() => setIsModalOpen(true)} />
+                                <Link to="/contacts" className="w-full">
+                                    <DiscussButton />
+                                </Link>
+                                {/* <DiscussButton onClick={() => setIsModalOpen(true)} />
                                 <RequestModal
                                     isOpen={isModalOpen}
                                     onClose={() => setIsModalOpen(false)}
-                                />
+                                /> */}
                             </motion.div>
                         </motion.div>
                     </motion.div>

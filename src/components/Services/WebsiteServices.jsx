@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '../Button';
 import ButtonServicesPages from './ButtonServicesPages';
 import RequestModal from '../Modal/RequestModal';
+import { Link } from 'react-router-dom';
 
 const WebsiteServices = ({ title, image }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,13 +23,16 @@ const WebsiteServices = ({ title, image }) => {
                         >
                             <h1 className="h1 uppercase">Наши услуги</h1>
                             <div className=" flex max-md:justify-center">
-                                <Button onClick={() => setIsModalOpen(true)}>
+                                <Link to="/contacts">
+                                    <Button>обсудить проект</Button>
+                                </Link>
+                                {/* <Button onClick={() => setIsModalOpen(true)}>
                                     обсудить проект
                                 </Button>
                                 <RequestModal
                                     isOpen={isModalOpen}
                                     onClose={() => setIsModalOpen(false)}
-                                />
+                                /> */}
                             </div>
                         </motion.div>
 

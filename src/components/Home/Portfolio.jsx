@@ -30,8 +30,8 @@ const Portfolio = () => {
                             enable: true,
                             momentum: false,
                         }}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        // onSlideChange={() => console.log('slide change')}
+                        // onSwiper={(swiper) => console.log(swiper)}
                         modules={[FreeMode, Autoplay]}
                     >
                         {portfolio_sw1.map(({ id, src, alt }) => (
@@ -56,8 +56,8 @@ const Portfolio = () => {
                             enable: true,
                             momentum: false,
                         }}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        // onSlideChange={() => console.log('slide change')}
+                        // onSwiper={(swiper) => console.log(swiper)}
                         modules={[FreeMode, Autoplay]}
                     >
                         {portfolio_sw2.map(({ id, src, alt }) => (

@@ -74,16 +74,30 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className=" flex justify-between text-p3 uppercase text-[15px] border-t-[1px] border-solid border-p3 pt-[30px]">
-                        <p className=" max-w-[640px]">
+                        <p className=" flex flex-col justify-between max-w-[640px]">
                             Запрещается полное или частичное копирование информации без письменного
                             разрешения администрации сайта
                             <br />
-                            <br /> <span>Проект B2B-Studio.ru</span>
+                            <br />
+                            <span>Проект B2B-Studio.ru</span>
                         </p>
-                        <div>
+                        <div className="flex flex-col gap-2">
                             <a href="/privacy-policy" target="_blank">
-                                Правила портала и отказ от ответственности
+                                Политика обработки персональных данных
                             </a>
+                            <a href="/cookie-policy" target="_blank">
+                                Политика использования файлов cookie
+                            </a>
+                            <a href="/personal-data" target="_blank">
+                                Согласие на обработку персональных данных
+                            </a>
+                            <button
+                                id="cookie-reset-btn"
+                                type="button"
+                                className="text-left uppercase hover:underline"
+                            >
+                                Изменить настройки cookie
+                            </button>
                         </div>
                         {/* <Link to="/contacts">Правила портала и отказ от ответственности</Link> */}
                     </div>

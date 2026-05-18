@@ -1,3 +1,4 @@
+import PolitikaObrabotkiPersonalnyhDannyh from '../../components/agrements/PolitikaObrabotkiPersonalnyhDannyh';
 import { privacyPolicyData } from '../../constants/agreement';
 
 const PrivacyPolicy = () => {
@@ -8,7 +9,9 @@ const PrivacyPolicy = () => {
                     Политика конфиденциальности
                 </h1>
 
-                <div className="prose prose-lg max-w-none">
+                <PolitikaObrabotkiPersonalnyhDannyh />
+
+                {/* <div className="prose prose-lg max-w-none">
                     <div className="bg-main p-6 md:p-8 mb-6">
                         <p className="text-gray-600 italic">
                             Последнее обновление: {new Date().toLocaleDateString('ru-RU')}
@@ -27,10 +30,10 @@ const PrivacyPolicy = () => {
                                     </ul>
                                 ) : (
                                     <p>{section.content}</p>
-                                )}
+                                )} */}
 
-                                {/* Блок контактов для соответствующего раздела */}
-                                {section.title === '9. Контакты' && (
+                {/* Блок контактов для соответствующего раздела */}
+                {/* {section.title === '9. Контакты' && (
                                     <div className="mt-4">
                                         <p>
                                             <strong>Email:</strong>{' '}
@@ -54,7 +57,7 @@ const PrivacyPolicy = () => {
                             будут опубликованы на данной странице.
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className=" absolute z-0 -top-0 w-full pointer-events-none">
                 <img src="/images/bg/hero.png" className=" max-lg:h-auto" alt="hero" />

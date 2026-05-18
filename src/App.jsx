@@ -13,6 +13,9 @@ import PolygraphyPage from './pages/Polygraphy/Polygraphy';
 import AdvertisingPage from './pages/Advertising/Advertising';
 import { ScrollRestoration } from './components/ScrollToTop';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import CookieUsagePolicy from './pages/PrivacyPolicy/CookieUsagePolicy';
+import PersonalData from './pages/PrivacyPolicy/PersonalData';
+import { CookieConsentBanner } from './components/agrements/CookieConsentBanner';
 
 const App = () => {
     return (
@@ -32,8 +35,11 @@ const App = () => {
                     <Route path="faq" element={<FAQ />} />
                     <Route path="contacts" element={<Contacts />} />
                     <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="cookie-policy" element={<CookieUsagePolicy />} />
+                    <Route path="personal-data" element={<PersonalData />} />
                 </Route>
             </Routes>
+            <CookieConsentBanner />
         </>
     );
 };

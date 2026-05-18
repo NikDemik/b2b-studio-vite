@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Button from '../Button';
 import { motion } from 'framer-motion';
 import RequestModal from '../Modal/RequestModal';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,11 +18,14 @@ const Hero = () => {
                         </h1>
                         <p className="h2 mb-8 ">для вашего бизнеса</p>
                         <div className=" flex max-md:justify-center">
-                            <Button onClick={() => setIsModalOpen(true)}>обсудить проект</Button>
+                            <Link to="/contacts">
+                                <Button>обсудить проект</Button>
+                            </Link>
+                            {/* <Button onClick={() => setIsModalOpen(true)}>обсудить проект</Button>
                             <RequestModal
                                 isOpen={isModalOpen}
                                 onClose={() => setIsModalOpen(false)}
-                            />
+                            /> */}
                         </div>
                     </div>
 
